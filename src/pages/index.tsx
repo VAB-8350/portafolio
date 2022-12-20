@@ -7,7 +7,6 @@ import profilePic from 'public/images/me.png'
 
 // Components
 import Visual from '@components/Visual'
-import { ST } from 'next/dist/shared/lib/utils'
 
 export default function Home() {
 
@@ -21,7 +20,7 @@ export default function Home() {
             <span>Skills</span>
           </div>
 
-          <h2>Mi portafolio</h2>
+          <h2>Mi Portafolio</h2>
         </nav>
         
         <div className={Style.body}>
@@ -52,7 +51,7 @@ export default function Home() {
         </section>
 
         <section className={Style['other-projects']}>
-          <h2>Other Projects</h2>
+          <h2>Projects</h2>
         </section>
 
       </div>

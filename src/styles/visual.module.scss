@@ -111,7 +111,7 @@
         p {
           font-size: 2.8rem;
           color: #bb9af7;
-          font-family: cascadia code;
+          font-family: Cascadia Code;
   
           @media (max-width: 700px) {
             font-size: 1.5rem;
@@ -145,7 +145,7 @@
           .typing {
             display: block;
             white-space: nowrap;
-            border-right: 4px solid transparent;
+            border-right: 4px solid magenta;
             overflow: hidden;
             visibility: hidden;
           }
@@ -184,32 +184,32 @@
           }
     
           @keyframes typing1 {
-            0% { width: 0; visibility: visible;}
-            100% { width: 12ch;}
+            0% { width: 0; visibility: visible; }
+            100% { width: 12ch; }
           }
     
           @keyframes typing2 {
-            0% { width: 0; visibility: visible;}
+            0% { width: 0; visibility: visible; }
             100% { width: 24ch }
           }
     
           @keyframes typing3 {
-            0% { width: 0; visibility: visible;}
+            0% { width: 0; visibility: visible; }
             100% { width: 29ch }
           }
     
           @keyframes typing4 {
-            0% { width: 0; visibility: visible;}
+            0% { width: 0; visibility: visible; }
             100% { width: 10ch }
           }
     
           @keyframes typing5 {
-            0% { width: 0; visibility: visible;}
+            0% { width: 0; visibility: visible; }
             100% { width: 2ch }
           }
     
           @keyframes blink {
-            50% {border-color: magenta}
+            50% {border-color: transparent }
           }
         }
   
@@ -221,7 +221,7 @@
           background-color: rgba(0, 0, 0, 0.5);
           color: rgba(255, 255, 255, 0.5);
           text-decoration: none;
-          font-family: cascadia code;
+          font-family: Cascadia Code;
           font-size: 1.6rem;
           cursor: pointer;
           border: none;

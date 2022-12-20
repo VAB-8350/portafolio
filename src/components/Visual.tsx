@@ -1,5 +1,5 @@
 // External modules
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef} from 'react'
 import VanillaTilt from 'vanilla-tilt'
 import Link from 'next/link'
 
@@ -7,6 +7,9 @@ import Link from 'next/link'
 import Style from '@styles/visual.module.scss'
 
 export default function Visual() {
+
+  // Ref
+  const code = useRef(null)
 
   // Local state
   const [age, setAge] = useState(0)
@@ -24,8 +27,11 @@ export default function Visual() {
     })
 
     setAge(edad)
-    cleanAnimations()
   }, [])
+
+  useEffect(() => {
+    cleanAnimations()
+  }, [code])
 
   // Methods
   const cleanAnimations = () => {
@@ -75,7 +81,7 @@ export default function Visual() {
         </section>
 
         <section className={Style.visualContent}>
-          <p>
+          <p ref={code}>
             <span className={`${Style.typing1} ${Style.typing}`} id='typing1'>
               const me <span className={Style.var}> = {'{'}</span> <br/>
             </span>
