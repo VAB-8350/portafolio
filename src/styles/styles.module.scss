@@ -17,7 +17,7 @@
 
     h2 {
       color: rgba(255, 255, 255, 0.808);
-      font-family: Cascadia Code;
+      font-family: Ubuntu;
       font-size: 3rem;
     }
 
@@ -29,7 +29,10 @@
 
       span {
         color: rgba(255, 255, 255, 0.7);
-        font-family: Cascadia Code;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        font-family: Ubuntu;
         padding: 10px;
         border-radius: 10px;
         font-size: 2rem;
@@ -102,7 +105,7 @@
   padding: 100px 70px;
   box-sizing: border-box;
 
-  :nth-child(1) {
+  .aboutMe {
     width: 100%;
     display: flex;
     gap: 90px;
@@ -114,13 +117,13 @@
       align-items: center;
       width: 50%;
       height: 200px;
-      background-color: aliceblue;
+      background-color: rgba(255, 255, 255, 0.7);
       border-radius: 15px;
       padding: 0 20px;
       
       h2 {
         font-size: 4rem;
-        font-family: Cascadia Code;
+        font-family: Ubuntu;
         display: inline;
         text-align: end;
       }
@@ -130,15 +133,15 @@
       width: 50%;
       h2 {
         margin-bottom: 20px;
-        color: #fff;
+        color: rgba(255, 255, 255, 0.7);
         font-size: 4rem;
-        font-family: Cascadia Code;
+        font-family: Ubuntu;
       }
 
       p {
-        color: #fff;
+        color: rgba(255, 255, 255, 0.7);
         font-size: 2rem;
-        font-family: Cascadia Code;
+        font-family: Ubuntu;
         line-height: 30px;
       }
     }
@@ -146,15 +149,28 @@
   }
 
   .other-projects {
-    margin-top: 100px;
     display: flex;
+    flex-direction: column;
+    align-items: center;
 
     h2 {
       display: inline;
       text-align: center;
-      color: #fff;
+      color: rgba(255, 255, 255, 0.7);
       font-size: 4rem;
-      font-family: Cascadia Code;
+      font-family: Ubuntu;
+      margin: 100px 0;
+    }
+
+    & > div {
+      box-sizing: border-box;
+      width: 100%;
+      margin: 0 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      place-items: center;
+      column-gap: 30px;
+      row-gap: 50px;
     }
   }
 }
