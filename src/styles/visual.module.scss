@@ -1,0 +1,247 @@
+  .visual {
+    width: 90%;
+    height: 70%;;
+    border-radius: 15px;
+    background-color: #1a1b267c;
+    backdrop-filter: blur(3px);
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    transition: box-shadow .3s;
+    
+    &:hover {
+      transition: box-shadow .3s;
+      box-shadow: 20px 20px 100px rgba(0, 0, 0, 0.6);
+      background-color: #1a1b26a2;
+    }
+
+    .visualTop {
+      display: flex;
+      align-items: center;
+      padding: 0 10px;
+      gap: 8px;
+      min-width: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-bottom: 2px solid #bb9af75d;
+      height: 30px;
+      font-size: 30px;
+      position: relative;
+  
+      span {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        opacity: .7;
+      }
+  
+      :nth-child(1){
+        background-color: red;
+      }
+      :nth-child(2){
+        background-color: yellow;
+      }
+      :nth-child(3){
+        background-color: green;
+      }
+      :nth-child(4){
+        position: absolute;
+        height: 7px;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+        width: 200px;
+        border-radius: 4px;
+        background-color: #a9b1d691;
+      }
+    }
+  
+    .body {
+      display: flex;
+      height: 100%;
+  
+      .fileBar {
+        width: 20%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 10px 20px;
+        box-sizing: border-box;
+        padding-top: 30px;
+  
+        @media (max-width: 700px) {
+          display: none;
+        }
+  
+        span {
+          width: 40px;
+          height: 7px;
+          border-radius: 8px;
+          background-color: #5a4a78;
+        }
+  
+        :nth-child(1){
+          height: 9px;
+          width: 65px;
+        }
+        :nth-child(2){
+          margin-top: 5px;
+        }
+        :nth-child(3){
+          width: 90px;
+        }
+        :nth-child(4){
+          width: 80px;
+        }
+      }
+  
+      .visualContent {
+        width: 80%;
+        height: 100%;
+        padding: 40px 20px;
+        border-left: 2px solid #bb9af75d;
+        display: inline-block;
+  
+  
+        @media (max-width: 700px) {
+          width: 100%;
+          padding: 10px;
+        }
+  
+        p {
+          font-size: 2.8rem;
+          color: #bb9af7;
+          font-family: cascadia code;
+  
+          @media (max-width: 700px) {
+            font-size: 1.5rem;
+          }
+  
+          @media (max-width: 370px) {
+            font-size: 1.3rem;
+          }
+          
+          > span {
+            display: block;
+            margin-bottom: 10px;
+          }
+  
+          .line {
+            margin-left: 20px;
+          }
+  
+          .string {
+            color: #9ece6a;
+          }
+  
+          .var {
+            color: #7dcfff;
+          }
+  
+          .num {
+            color: #ff9e64;
+          }
+  
+          .typing {
+            display: block;
+            white-space: nowrap;
+            border-right: 4px solid transparent;
+            overflow: hidden;
+            visibility: hidden;
+          }
+    
+          .typing1 {
+            width: 12ch;
+            animation: typing1 1.1s steps(12), blink .5s infinite step-end alternate;
+          }
+    
+          .typing2 {
+            width: 24ch;
+            animation: typing2 2.1s steps(24), blink .5s infinite step-end alternate;
+            animation-delay: 1s;
+          }
+    
+          .typing3 {
+            width: 29ch;
+            animation: typing3 2.1s steps(29), blink .5s infinite step-end alternate;
+            animation-delay: 3s;
+          }
+    
+          .typing4 {
+            width: 10ch;
+            animation: typing4 1.1s steps(10), blink .5s infinite step-end alternate;
+            animation-delay: 5s;
+          }
+    
+          .typing5 {
+            display: block;
+            white-space: nowrap;
+            border-right: 6px solid transparent;
+            overflow: hidden;
+            width: 2ch;
+            animation: typing5 1.1s steps(2), blink .5s infinite step-end alternate;
+            animation-delay: 6s;
+          }
+    
+          @keyframes typing1 {
+            0% { width: 0; visibility: visible;}
+            100% { width: 12ch;}
+          }
+    
+          @keyframes typing2 {
+            0% { width: 0; visibility: visible;}
+            100% { width: 24ch }
+          }
+    
+          @keyframes typing3 {
+            0% { width: 0; visibility: visible;}
+            100% { width: 29ch }
+          }
+    
+          @keyframes typing4 {
+            0% { width: 0; visibility: visible;}
+            100% { width: 10ch }
+          }
+    
+          @keyframes typing5 {
+            0% { width: 0; visibility: visible;}
+            100% { width: 2ch }
+          }
+    
+          @keyframes blink {
+            50% {border-color: magenta}
+          }
+        }
+  
+        a {
+          position: absolute;
+          bottom: 20px;
+          right: 20px;
+          padding: 6px 20px;
+          background-color: rgba(0, 0, 0, 0.5);
+          color: rgba(255, 255, 255, 0.5);
+          text-decoration: none;
+          font-family: cascadia code;
+          font-size: 1.6rem;
+          cursor: pointer;
+          border: none;
+          outline: none;
+          border-radius: 50px;
+          transition: all .5s;
+  
+  
+          &:hover {
+            color: #fff;
+            box-shadow: 0 0 20px #f07dff25;
+            transform: scale(1.1);
+            transition: .3s;
+          }
+
+          &:active {
+            transform: scale(.8);
+            transition: 0s;
+          }
+        }
+      }
+    }
+  }

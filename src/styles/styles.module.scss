@@ -1,0 +1,160 @@
+.head {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-image: url('../public/images/background1.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 70px;
+    min-height: 70px;
+    align-items: center;
+
+    h2 {
+      color: rgba(255, 255, 255, 0.808);
+      font-family: cascadia code;
+      font-size: 3rem;
+    }
+
+    div {
+      display: flex;
+      gap: 50px;
+      margin-right: 50px;
+
+
+      span {
+        color: rgba(255, 255, 255, 0.7);
+        font-family: cascadia code;
+        padding: 10px;
+        border-radius: 10px;
+        font-size: 2rem;
+        cursor: pointer;
+        transition: all 0.5s ease-out 0s;
+
+        &:hover {
+          background: rgba(255, 255, 255, 0.1);
+          box-shadow: rgba(255, 255, 255, 0.1) 0px 10px 20px, rgb(255 255 255 / 20%) 0px 0px 0px 0.5px inset;
+        }
+
+        &:active {
+          transform: scale(.8);
+          transition: 0s;
+        }
+      }
+    }
+  }
+
+  .body {
+    display: flex;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 70px;
+    bottom: 0;
+    overflow: hidden;
+
+    @media (max-width: 1200px) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .left {
+      width: 60%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+      @media (max-width: 1200px) {
+        width: 90%;
+      }
+    }
+  
+    .right {
+      width: 40%;
+      display: grid;
+      place-content: center;
+  
+      @media (max-width: 1200px) {
+        display: none;
+      }
+  
+      picture {
+        position: relative;
+  
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+}
+
+.body-page {
+  width: 100%;
+  padding: 100px 70px;
+  box-sizing: border-box;
+
+  :nth-child(1) {
+    width: 100%;
+    display: flex;
+    gap: 90px;
+    box-sizing: border-box;
+
+
+    .tecnlogies {
+      display: flex;
+      align-items: center;
+      width: 50%;
+      height: 200px;
+      background-color: aliceblue;
+      border-radius: 15px;
+      padding: 0 20px;
+      
+      h2 {
+        font-size: 4rem;
+        font-family: cascadia code;
+        display: inline;
+        text-align: end;
+      }
+    }
+
+    .about-me {
+      width: 50%;
+      h2 {
+        margin-bottom: 20px;
+        color: #fff;
+        font-size: 4rem;
+        font-family: cascadia code;
+      }
+
+      p {
+        color: #fff;
+        font-size: 2rem;
+        font-family: cascadia code;
+        line-height: 30px;
+      }
+    }
+
+  }
+
+  .other-projects {
+    margin-top: 100px;
+    display: flex;
+
+    h2 {
+      display: inline;
+      text-align: center;
+      color: #fff;
+      font-size: 4rem;
+      font-family: cascadia code;
+    }
+  }
+}

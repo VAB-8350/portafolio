@@ -1,0 +1,27 @@
+@import './src/styles/fonts/fonts';
+
+html {
+  font-size: 62.5%;
+
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #22272e;
+
+  p {
+    margin: 0;
+  }
+  
+  h1 {
+    margin: 0;
+  }
+  h2 {
+    margin: 0;
+  }
+  h3 {
+    margin: 0;
+  }
+}
