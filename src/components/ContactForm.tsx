@@ -5,6 +5,8 @@ import { FaCaretRight, FaCompactDisc } from "react-icons/fa"
 
 // Internal modules
 import Style from '@styles/ContactForm.module.scss'
+import Image from 'next/image';
+import fromimport from 'public/images/form.png'
 
 export default function ContactForm() {
 
@@ -71,7 +73,10 @@ export default function ContactForm() {
 
   return (
     <div className={Style.contentForm}>
-      <img src="https://sergioescriba.com/wp-content/uploads/2019/07/programas-crear-disenar-paginas-web.png" alt="" />
+      <Image
+        src={fromimport}
+        alt='Imagen de formulario'
+      />
       
       <form onSubmit={handlerSubmit} ref={formRef}>
 
@@ -81,6 +86,7 @@ export default function ContactForm() {
             type='text'
             name='name'
             required
+            placeholder='Andres'
           />
         </div>
 
@@ -89,6 +95,7 @@ export default function ContactForm() {
           <input
             type='text'
             name='email'
+            placeholder='example@gmail.com'
             required
           />
         </div>
@@ -97,6 +104,7 @@ export default function ContactForm() {
           <label htmlFor='message'>Message</label>
           <textarea
             name='message'
+            placeholder='Write your message here'
             required
           />
         </div>

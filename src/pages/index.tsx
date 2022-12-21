@@ -18,6 +18,7 @@ import typescript from 'public/images/typescript.png'
 import Visual from '@components/Visual'
 import ProjectCard from '@components/ProjectCard'
 import ContactForm from '@components/ContactForm'
+import Link from 'next/link'
 
 const projects = [
   {
@@ -150,9 +151,15 @@ export default function Home() {
       </div>
 
       <footer className={Style.footer}>
-        <FaGithub className={Style.icons} />
-        <FaLinkedin className={Style.icons} />
-        <FaEnvelope className={Style.icons} />
+        <Link target='_blank' href="https://github.com/VAB-8350">
+          <FaGithub className={Style.icons} />
+        </Link>
+        <Link target='_blank' href="https://www.linkedin.com/in/andres-barilin-1b8a0a1b4/">
+          <FaLinkedin className={Style.icons} />
+        </Link>
+        <Link target='_blank' href="mailto:victor.barilin2014@gmail.com">
+          <FaEnvelope className={Style.icons} />
+        </Link>
       </footer>
     </div>
   )

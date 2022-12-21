@@ -147,6 +147,7 @@
       width: 50%;
       min-height: 100%;
       background-color: rgba(0, 0, 0, 0.3);
+      box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
       border-radius: 15px;
       padding: 30px 20px;
       box-sizing: border-box;
@@ -283,14 +284,34 @@
 
 .footer {
   background-color: rgba(0, 0, 0, 0.3);
-  height: 70px;
+  height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 50px;
 
-  .icons {
-    font-size: 3rem;
+  a {
+    box-sizing: border-box;
+    padding: 5px;
     color: rgba(255, 255, 255, 0.7);
+
+
+
+    &:hover {
+      color: rgba(209, 113, 238, 0.5);
+    }
+
+    &:hover .icons{
+      padding-bottom: 15px;
+      transition: all .3s ease-in-out;
+    }
+
+    .icons {
+      font-size: 3rem;
+      padding: 7px;
+      border-radius: 6px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+      transition: all .5s ease-in-out;
+    }
   }
 }
