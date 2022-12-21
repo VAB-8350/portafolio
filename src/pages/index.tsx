@@ -17,6 +17,7 @@ import typescript from 'public/images/typescript.png'
 // Components
 import Visual from '@components/Visual'
 import ProjectCard from '@components/ProjectCard'
+import ContactForm from '@components/ContactForm'
 
 const projects = [
   {
@@ -72,6 +73,7 @@ export default function Home() {
       </header>
 
       <div className={Style['body-page']}>
+
         <section className={Style.aboutMe}>
           <div className={Style.tecnologies}>
             <h2>Tecnologies</h2>
@@ -107,7 +109,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className={Style['projects']}>
+        <section className={Style.projects}>
           <h2>Projects</h2>
 
           <div>
@@ -123,6 +125,14 @@ export default function Home() {
               ))
             }
           </div>
+        </section>
+
+        <section className={Style.contact}>
+            <h2>
+              Contact me
+            </h2>
+
+            <ContactForm />
         </section>
 
       </div>
