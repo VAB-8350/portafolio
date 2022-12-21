@@ -2,11 +2,15 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-image: url('../public/images/background1.png');
+  background-image: url('../public/images/background3.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+
+  @media (max-width: 700px) {
+    min-height: 50vh;
+  }
 
   nav {
     display: flex;
@@ -25,6 +29,10 @@
       display: flex;
       gap: 50px;
       margin-right: 50px;
+
+      @media (max-width: 786px) {
+        display: none;
+      }
 
 
       span {
@@ -64,6 +72,7 @@
     @media (max-width: 1200px) {
       flex-direction: column;
       align-items: center;
+      justify-content: center;
     }
 
     .left {
@@ -105,21 +114,36 @@
   padding: 100px 70px;
   box-sizing: border-box;
 
+  @media (max-width: 700px) {
+    padding: 50px 30px;
+  }
+
   .aboutMe {
     width: 100%;
     display: flex;
     gap: 90px;
     box-sizing: border-box;
 
+    @media (max-width: 820px) {
+      flex-direction: column;
+      gap: 30px;
+    }
+
 
     .tecnlogies {
       display: flex;
       align-items: center;
       width: 50%;
-      height: 200px;
+      min-height: 100%;
       background-color: rgba(255, 255, 255, 0.7);
       border-radius: 15px;
       padding: 0 20px;
+      box-sizing: border-box;
+
+      @media (max-width: 820px) {
+        justify-content: center;
+        width: 100%;
+      }
       
       h2 {
         font-size: 4rem;
@@ -131,11 +155,25 @@
 
     .about-me {
       width: 50%;
+      min-height: 100%;
+      box-sizing: border-box;
+      padding: 20px;
+      border-radius: 20px;
+      border: 2px solid rgba(255, 255, 255, 0.7);
+      
+      @media (max-width: 820px) {
+        width: 100%;
+      }
+
       h2 {
         margin-bottom: 20px;
         color: rgba(255, 255, 255, 0.7);
         font-size: 4rem;
         font-family: Ubuntu;
+
+        @media (max-width: 820px) {
+          text-align: center;
+        }
       }
 
       p {
@@ -160,6 +198,10 @@
       font-size: 4rem;
       font-family: Ubuntu;
       margin: 100px 0;
+
+      @media (max-width: 700px) {
+        margin: 50px 0;
+      }
     }
 
     & > div {
@@ -171,6 +213,10 @@
       place-items: center;
       column-gap: 30px;
       row-gap: 50px;
+
+      @media (max-width: 700px) {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      }
     }
   }
 }
