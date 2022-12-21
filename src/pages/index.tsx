@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import Image from 'next/image'
-import { FaUser, FaInbox } from "react-icons/fa"
+import { FaUser, FaInbox, FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa"
 
 // Internal module
 import Style from '@styles/styles.module.scss'
@@ -44,6 +44,18 @@ const projects = [
 ]
 
 export default function Home() {
+  
+  // Ref
+  const about = useRef(null)
+  const contact = useRef(null)
+
+  const nextAbout = () => {
+    about.current?.scrollIntoView({block: 'center', behavior: 'smooth'})
+  }
+
+  const nextContact = () => {
+    contact.current?.scrollIntoView({block: 'center', behavior: 'smooth'})
+  }
 
   return (
     <div>
@@ -52,8 +64,8 @@ export default function Home() {
 
         <nav>
           <div>
-            <span><FaUser /> About me</span>
-            <span><FaInbox /> Contact</span>
+            <span onClick={nextAbout}><FaUser /> About me</span>
+            <span onClick={nextContact}><FaInbox /> Contact</span>
           </div>
 
           <h2>Mi Portafolio</h2>
@@ -74,7 +86,7 @@ export default function Home() {
 
       <div className={Style['body-page']}>
 
-        <section className={Style.aboutMe}>
+        <section className={Style.aboutMe} ref={about} >
           <div className={Style.tecnologies}>
             <h2>Tecnologies</h2>
             <div>
@@ -114,8 +126,9 @@ export default function Home() {
 
           <div>
             {
-              projects.map(project => (
+              projects.map((project, index) => (
                 <ProjectCard
+                  key={index}
                   img={project.img}
                   linkCode={project.linkCode}
                   linkProject={project.linkProject}
@@ -127,15 +140,20 @@ export default function Home() {
           </div>
         </section>
 
-        <section className={Style.contact}>
+        <section className={Style.contact}ref={contact}>
             <h2>
               Contact me
             </h2>
 
             <ContactForm />
         </section>
-
       </div>
+
+      <footer className={Style.footer}>
+        <FaGithub className={Style.icons} />
+        <FaLinkedin className={Style.icons} />
+        <FaEnvelope className={Style.icons} />
+      </footer>
     </div>
   )
 }

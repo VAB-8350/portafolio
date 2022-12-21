@@ -280,3 +280,17 @@
     }
   }
 }
+
+.footer {
+  background-color: rgba(0, 0, 0, 0.3);
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+
+  .icons {
+    font-size: 3rem;
+    color: rgba(255, 255, 255, 0.7);
+  }
+}
