@@ -8,6 +8,11 @@ import profilePic from 'public/images/me.png'
 import project1 from 'public/images/project1.png'
 import project2 from 'public/images/project2.png'
 import project3 from 'public/images/project3.png'
+import css from 'public/images/css.png'
+import html from 'public/images/html.png'
+import javascript from 'public/images/javascript.png'
+import react from 'public/images/react.png'
+import typescript from 'public/images/typescript.png'
 
 // Components
 import Visual from '@components/Visual'
@@ -68,9 +73,29 @@ export default function Home() {
 
       <div className={Style['body-page']}>
         <section className={Style.aboutMe}>
-          <div className={Style.tecnlogies}>
+          <div className={Style.tecnologies}>
             <h2>Tecnologies</h2>
             <div>
+              <span>
+                <Image src={javascript} alt="logo javascript" />
+                <span>JavaScript</span>
+              </span>
+              <span>
+                <Image src={react} alt="logo react" />
+                <span>React</span>
+              </span>
+              <span>
+                <Image src={typescript} alt="logo typescript" />
+                <span>TypeScript</span>
+              </span>
+              <span>
+                <Image src={css} alt="logo css" />
+                <span>CSS</span>
+              </span>
+              <span>
+                <Image src={html} alt="logo html" />
+                <span>HTML</span>
+              </span>
             </div>
           </div>
 
@@ -82,7 +107,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className={Style['other-projects']}>
+        <section className={Style['projects']}>
           <h2>Projects</h2>
 
           <div>
