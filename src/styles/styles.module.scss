@@ -1,11 +1,21 @@
+.background {
+  background-image: url('../public/images/background4.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  opacity: .5;
+}
+
 .head {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-image: url('../public/images/background3.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   position: relative;
 
   @media (max-width: 700px) {

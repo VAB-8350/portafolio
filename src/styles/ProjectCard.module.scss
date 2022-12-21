@@ -5,21 +5,21 @@
   align-items: center;
   width: 300px;
   height: 100%;
-  background-color: #22272e;
-  // border: 2px solid #444c56;
+  background-color: rgba(0, 0, 0, 0.2);
   border-bottom: 3px solid transparent;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
+  border-radius: 10px;
   transition: all .5s ease-in-out;
 
   @media (max-width: 700px) {
     width: 100%;
   }
-
-
+  
+  
   &:hover {
-    box-shadow: 0 5px 50px rgba(0, 0, 0, 0.5);
-    border-bottom: 3px solid #530f57;
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.5);
+    border-bottom: 3px solid #772e7ab4;
     transform: translateY(-7px);
     transition: all .3s ease-in-out;
   }
@@ -28,7 +28,7 @@
     width: 100%;
     height: 200px;
     position: relative;
-    border-radius: 8px 8px 0 0;
+    border-radius: 10px 10px 0 0;
     overflow: hidden;
     
     img {

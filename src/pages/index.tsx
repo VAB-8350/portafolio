@@ -41,6 +41,7 @@ export default function Home() {
 
   return (
     <div>
+      <span className={Style.background} />
       <header className={Style.head}>
 
         <nav>
