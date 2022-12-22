@@ -146,6 +146,10 @@
           .num {
             color: #ff9e64;
           }
+
+          .noShow {
+            visibility: hidden;
+          }
   
           .typing {
             display: block;
@@ -181,7 +185,7 @@
           .typing5 {
             display: block;
             white-space: nowrap;
-            border-right: 6px solid transparent;
+            border-right: 4px solid magenta;
             overflow: hidden;
             width: 2ch;
             animation: typing5 1.1s steps(2), blink .5s infinite step-end alternate;

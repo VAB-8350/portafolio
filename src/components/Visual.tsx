@@ -82,22 +82,22 @@ export default function Visual() {
 
         <section className={Style.visualContent}>
           <p ref={code}>
-            <span className={`${Style.typing1} ${Style.typing}`} id='typing1'>
+            <span className={code.current ? `${Style.typing1} ${Style.typing}` : Style.noShow} id='typing1'>
               const me <span className={Style.var}> = {'{'}</span> <br/>
             </span>
 
-            <span className={`${Style.typing2} ${Style.typing}`} id='typing2'>
+            <span className={code.current ? `${Style.typing2} ${Style.typing}` : Style.noShow} id='typing2'>
               <span className={`${Style.var} ${Style.line}`}>name: '</span><span className={Style.string}>Andres Barilin</span><span className={Style.var}>',</span> <br/>
             </span>
 
-            <span className={`${Style.typing3} ${Style.typing}`} id='typing3'>
+            <span className={code.current ? `${Style.typing3} ${Style.typing}` : Style.noShow} id='typing3'>
               <span className={`${Style.var} ${Style.line}`}>main: '</span><span className={Style.string}>Front-end Developer</span><span className={Style.var}>',</span> <br/>
             </span>
 
-            <span className={`${Style.typing4} ${Style.typing}`} id='typing4'>
+            <span className={code.current ? `${Style.typing4} ${Style.typing}` : Style.noShow} id='typing4'>
               <span className={`${Style.var} ${Style.line}`}>years:</span> <span className={Style.num}>{age}</span><br/>
             </span>
-            <span className={`${Style.typing5} ${Style.typing}`} id='typing5'>
+            <span className={code.current ? `${Style.typing5} ${Style.typing}` : Style.noShow} id='typing5'>
               <span className={Style.var}>{'}'};</span>
             </span>
 
