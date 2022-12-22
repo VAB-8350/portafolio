@@ -8,16 +8,13 @@ import Style from '@styles/styles.module.scss'
 import projects from 'data/projects'
 
 // Images
-
-  // Me
 import profilePic from 'public/images/me.png'
-
-  // Icons
 import css from 'public/images/icons/css.png'
 import html from 'public/images/icons/html.png'
 import javascript from 'public/images/icons/javascript.png'
 import react from 'public/images/icons/react.png'
 import typescript from 'public/images/icons/typescript.png'
+import next from 'public/images/icons/next.png'
 
 // Components
 import Visual from '@components/Visual'
@@ -82,16 +79,24 @@ export default function Home() {
                 <span>React</span>
               </span>
               <span>
-                <Image src={typescript} alt="logo typescript" />
-                <span>TypeScript</span>
-              </span>
-              <span>
                 <Image src={css} alt="logo css" />
                 <span>CSS</span>
               </span>
               <span>
                 <Image src={html} alt="logo html" />
                 <span>HTML</span>
+              </span>
+            </div>
+
+            <h3>I am learning</h3>
+            <div className={Style['want-lern']}>
+              <span>
+                <Image src={typescript} alt="logo typescript" />
+                <span>TypeScript</span>
+              </span>
+              <span>
+                <Image src={next} alt="logo next js" />
+                <span>Next js</span>
               </span>
             </div>
           </div>

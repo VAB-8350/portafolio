@@ -30,9 +30,14 @@
     align-items: center;
 
     h2 {
-      color: rgba(255, 255, 255, 0.808);
+      color: rgba(255, 255, 255, 0.7);
       font-family: Ubuntu;
       font-size: 3rem;
+
+      @media (max-width: 700px) {
+        width: 100%;
+        text-align: center;
+      }
     }
 
     div {
@@ -78,6 +83,10 @@
     top: 70px;
     bottom: 0;
     overflow: hidden;
+
+    @media (max-width: 700px) {
+      top: 0;
+    }
 
     @media (max-width: 1200px) {
       flex-direction: column;
@@ -126,6 +135,7 @@
 
   @media (max-width: 700px) {
     padding: 30px;
+    margin-top: -70px;
   }
 
   .aboutMe {
@@ -191,6 +201,17 @@
             font-family: Ubuntu;
           }
         }
+      }
+
+      h3 {
+        font-size: 2rem;
+        font-family: Ubuntu;
+        color: rgba(255, 255, 255, 0.5);
+        margin: 30px 0;
+      }
+
+      .want-lern {
+
       }
     }
 
@@ -294,8 +315,6 @@
     box-sizing: border-box;
     padding: 5px;
     color: rgba(255, 255, 255, 0.7);
-
-
 
     &:hover {
       color: rgba(209, 113, 238, 0.5);
