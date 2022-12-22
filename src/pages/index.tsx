@@ -4,15 +4,26 @@ import { FaUser, FaInbox, FaLinkedin, FaGithub, FaEnvelope } from "react-icons/f
 
 // Internal module
 import Style from '@styles/styles.module.scss'
+
+// Images
+
+  // Me
 import profilePic from 'public/images/me.png'
-import project1 from 'public/images/project1.png'
-import project2 from 'public/images/project2.png'
-import project3 from 'public/images/project3.png'
-import css from 'public/images/css.png'
-import html from 'public/images/html.png'
-import javascript from 'public/images/javascript.png'
-import react from 'public/images/react.png'
-import typescript from 'public/images/typescript.png'
+
+  // Projects
+import buckedup from 'public/images/projects/buckedup.png'
+import movies from 'public/images/projects/movies.png'
+import rabit from 'public/images/projects/rabit.png'
+import todo from 'public/images/projects/todo.png'
+import testGrid from 'public/images/projects/testGrid.png'
+import clon from 'public/images/projects/clon.png'
+
+  // Icons
+import css from 'public/images/icons/css.png'
+import html from 'public/images/icons/html.png'
+import javascript from 'public/images/icons/javascript.png'
+import react from 'public/images/icons/react.png'
+import typescript from 'public/images/icons/typescript.png'
 
 // Components
 import Visual from '@components/Visual'
@@ -26,22 +37,43 @@ const projects = [
     description: 'En mi trabajo actual estamos en el desarrollo de un Ecommerce, este es para una empresa de EE.UU. enfocada en los productos fitnes',
     linkCode: 'https://github.com/VAB-8350/rabbit-game',
     linkProject: 'https://vab-8350.github.io/rabbit-game/',
-    img: project1
+    img: buckedup
+  },
+  {
+    title: 'Lista de tareas',
+    description: 'Este proyecto lo realice en un curso de react en platzi, tiene un disenio mas apropiado a mobile',
+    linkCode: 'https://github.com/VAB-8350/Platzi---Todos',
+    linkProject: 'https://vab-8350.github.io/Platzi---Todos/',
+    img: todo
+  },
+  {
+    title: 'test con CSS grid',
+    description: 'Curso de platzi especializado al uso de display grid',
+    linkCode: 'https://github.com/VAB-8350/Platzi---test_CSS_grid',
+    linkProject: 'https://vab-8350.github.io/Platzi---test_CSS_grid/',
+    img: testGrid
   },
   {
     title: 'App de peliculas',
-    description: 'Curso de platzi consumo de api rest (realizado solo con HTML CSS Y JavaScript)',
+    description: 'Curso de platzi consumo de api rest (realizado solo con HTML CSS Y JavaScript vanilla)',
     linkCode: 'https://github.com/VAB-8350/rabbit-game',
-    linkProject: 'https://vab-8350.github.io/rabbit-game/',
-    img: project2
+    linkProject: 'https://github.com/VAB-8350/curso-practico-api-rest---Platzi',
+    img: movies
   },
   {
     title: 'Mini juego de conejos',
     description: 'Este proyecto lo realice en un curso de animaciones en platzi',
     linkCode: 'https://github.com/VAB-8350/rabbit-game',
     linkProject: 'https://vab-8350.github.io/rabbit-game/',
-    img: project3
-  }
+    img: rabit
+  },
+  {
+    title: 'Clon de google',
+    description: 'Curso de platzi (practica de estilos)',
+    linkCode: 'https://github.com/VAB-8350/rabbit-game',
+    linkProject: 'https://vab-8350.github.io/Platzi---Mi_clon_google/',
+    img: clon
+  },
 ]
 
 export default function Home() {
