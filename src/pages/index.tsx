@@ -8,13 +8,14 @@ import Style from '@styles/styles.module.scss'
 import projects from 'data/projects'
 
 // Images
-import profilePic from 'public/images/me.png'
-import css from 'public/images/icons/css.png'
-import html from 'public/images/icons/html.png'
-import javascript from 'public/images/icons/javascript.png'
-import react from 'public/images/icons/react.png'
-import typescript from 'public/images/icons/typescript.png'
-import next from 'public/images/icons/next.png'
+import profilePic from '@public/images/me.png'
+import css from '@public/images/icons/css.png'
+import html from '@public/images/icons/html.png'
+import javascript from '@public/images/icons/javascript.png'
+import react from '@public/images/icons/react.png'
+import typescript from '@public/images/icons/typescript.png'
+import next from '@public/images/icons/next.png'
+import vicode from '@public/images/icons/vicode.png'
 
 // Components
 import Visual from '@components/Visual'
@@ -47,7 +48,7 @@ export default function Home() {
             <span onClick={nextContact}><FaInbox /> Contact</span>
           </div>
 
-          <h2>Mi Portafolio</h2>
+          <h2><Image src={vicode} alt="logo personal" /> Mi Portafolio</h2>
         </nav>
         
         <div className={Style.body}>

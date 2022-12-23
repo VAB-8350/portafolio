@@ -1,5 +1,5 @@
 .background {
-  background-image: url('../public/images/background4.png');
+  background-image: url('../../public/images/background4.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -33,6 +33,14 @@
       color: rgba(255, 255, 255, 0.7);
       font-family: Ubuntu;
       font-size: 3rem;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+
+      img {
+        width: 50px;
+        height: 50px;
+      }
 
       @media (max-width: 700px) {
         width: 100%;

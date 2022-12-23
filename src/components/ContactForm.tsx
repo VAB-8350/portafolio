@@ -6,7 +6,7 @@ import { FaCaretRight, FaCompactDisc } from "react-icons/fa"
 // Internal modules
 import Style from '@styles/ContactForm.module.scss'
 import Image from 'next/image';
-import fromimport from 'public/images/form.png'
+import fromimage from '@public/images/form.png'
 
 export default function ContactForm() {
 
@@ -74,7 +74,7 @@ export default function ContactForm() {
   return (
     <div className={Style.contentForm}>
       <Image
-        src={fromimport}
+        src={fromimage}
         alt='Imagen de formulario'
       />
       

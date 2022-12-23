@@ -1,10 +1,10 @@
 // Projects
-import buckedup from 'public/images/projects/buckedup.png'
-import movies from 'public/images/projects/movies.png'
-import rabit from 'public/images/projects/rabit.png'
-import todo from 'public/images/projects/todo.png'
-import testGrid from 'public/images/projects/testGrid.png'
-import clon from 'public/images/projects/clon.png'
+import buckedup from '@public/images/projects/buckedup.png'
+import movies from '@public/images/projects/movies.png'
+import rabit from '@public/images/projects/rabit.png'
+import todo from '@public/images/projects/todo.png'
+import testGrid from '@public/images/projects/testGrid.png'
+import clon from '@public/images/projects/clon.png'
 
 const projects = [
   // buckedup
