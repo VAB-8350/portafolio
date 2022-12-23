@@ -9,7 +9,7 @@ import Link from 'next/link'
 
 export default function ProjectCard({title, img, description, linkProject, linkCode}) {
 
-  const isPrivate = linkCode === 'privado'
+  const isPrivate = linkCode === 'private'
 
   return (
     <div className={Style['project-card']}>

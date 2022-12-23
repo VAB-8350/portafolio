@@ -9,48 +9,48 @@ import clon from '@public/images/projects/clon.png'
 const projects = [
   // buckedup
   {
-    title: 'Mi trabajo actual',
-    description: 'En mi trabajo actual estamos desarrollando un Ecommerce, este es para una empresa de EE.UU. enfocada en los productos fitnes',
-    linkCode: 'privado',
+    title: 'My current job',
+    description: 'In my current job we are developing an Ecommerce, this is for a U.S. company focused on fitness products.',
+    linkCode: 'private',
     linkProject: 'https://www.buckedup.com',
     img: buckedup
   },
   // To do
   {
-    title: 'Lista de tareas',
-    description: 'Este proyecto lo realice en un curso de react en platzi, tiene un disenio mas apropiado a mobile',
+    title: 'Task list',
+    description: 'I made this project in a react course in platzi, it has a design more appropriate to mobile.',
     linkCode: 'https://github.com/VAB-8350/Platzi---Todos',
     linkProject: 'https://vab-8350.github.io/Platzi---Todos/',
     img: todo
   },
   // Movies
   {
-    title: 'App de peliculas',
-    description: 'Curso de platzi consumo de api rest (realizado solo con HTML CSS Y JavaScript vanilla)',
+    title: 'Movies App',
+    description: 'Course of platzi api rest consumption (done only with HTML CSS and vanilla JavaScript)',
     linkCode: 'https://github.com/VAB-8350/curso-practico-api-rest---Platzi',
     linkProject: 'https://vab-8350.github.io/curso-practico-api-rest---Platzi/',
     img: movies
   },
   // Grid
   {
-    title: 'test con CSS grid',
-    description: 'Curso de platzi especializado al uso de display grid',
+    title: 'test with CSS grid',
+    description: 'Platzi course specialized in the use of display grid',
     linkCode: 'https://github.com/VAB-8350/Platzi---test_CSS_grid',
     linkProject: 'https://vab-8350.github.io/Platzi---test_CSS_grid/',
     img: testGrid
   },
   // Rabbit
   {
-    title: 'Mini juego de conejos',
-    description: 'Este proyecto lo realice en un curso de animaciones en platzi',
+    title: 'Mini rabbit game',
+    description: 'This project was made in a course of animations in platzi',
     linkCode: 'https://github.com/VAB-8350/rabbit-game',
     linkProject: 'https://vab-8350.github.io/rabbit-game/',
     img: rabit
   },
   // Clone
   {
-    title: 'Clon de google',
-    description: 'Curso de platzi (practica de estilos)',
+    title: 'Google clone',
+    description: 'Platzi course (style practice)',
     linkCode: 'https://github.com/VAB-8350/Platzi---Mi_clon_google',
     linkProject: 'https://vab-8350.github.io/Platzi---Mi_clon_google/',
     img: clon

@@ -22,7 +22,6 @@ import Visual from '@components/Visual'
 import ProjectCard from '@components/ProjectCard'
 import ContactForm from '@components/ContactForm'
 
-
 export default function Home() {
   
   // Ref
