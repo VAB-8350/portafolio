@@ -228,6 +228,16 @@
           right: 20px;
           display: flex;
           gap: 10px;
+
+          @media (max-width: 335px) {
+            flex-direction: column;
+          }
+
+          @media (max-width: 700px) {
+            position: inherit;
+            margin-top: 20px;
+          }
+
           
           a {
             padding: 6px 20px;

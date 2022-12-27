@@ -104,7 +104,15 @@ export default function Home() {
           <div className={Style['about-me']}>
             <h2>About me</h2>
             <p>
-              I am a technology enthusiast, thirsty for learning, and very responsible. I want to grow in this field and overcome the challenges that I encounter.
+              After coming across the gigantic and exciting world of software development, I decided to focus on web development, thirsty to learn and improve my work to offer more robust and reliable solutions.
+              <br/><br/>
+
+              I like being able to contribute ideas to the team and learn from their experiences,
+              to achieve the best possible result by committing to the project and the client.
+              <br/><br/>
+
+              I am currently working in Devias as a Front-end developer, about 1 year ago. I add my experience in ArboT, (a robotics company). Although I did not use the same technologies,
+              I used logical thinking focused on problem-solving. That made my entry into web software development much more accessible.
             </p>
           </div>
         </section>
