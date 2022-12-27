@@ -103,12 +103,17 @@ export default function Visual() {
 
           </p>
 
-          <Link
-            href='https://www.canva.com/design/DAFU1phnSlQ/tWjFq8KYUCLshdHhX6Skxw/view?utm_content=DAFU1phnSlQ&utm_campaign=designshare&utm_medium=link&utm_source=homepage_design_menu'
-            target='_blanck'
-          >
-            View CV
-          </Link>
+          <div>
+            <Link href="/pdf/CV.pdf" target='_blank' download='CV-Andres_barilin.pdf'>Download CV</Link>
+
+            <Link
+              href='https://www.canva.com/design/DAFU1phnSlQ/tWjFq8KYUCLshdHhX6Skxw/view?utm_content=DAFU1phnSlQ&utm_campaign=designshare&utm_medium=link&utm_source=homepage_design_menu'
+              target='_blanck'
+            >
+              View CV
+            </Link>
+          </div>
+
         </section>
       </div>
 

@@ -221,35 +221,41 @@
             50% {border-color: transparent }
           }
         }
-  
-        a {
+
+        div {
           position: absolute;
           bottom: 20px;
           right: 20px;
-          padding: 6px 20px;
-          background-color: rgba(0, 0, 0, 0.5);
-          color: rgba(255, 255, 255, 0.5);
-          text-decoration: none;
-          font-family: Ubuntu;
-          font-size: 1.6rem;
-          cursor: pointer;
-          border: none;
-          outline: none;
-          border-radius: 50px;
-          transition: all .5s;
+          display: flex;
+          gap: 10px;
+          
+          a {
+            padding: 6px 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: rgba(255, 255, 255, 0.5);
+            text-decoration: none;
+            font-family: Ubuntu;
+            font-size: 1.6rem;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            border-radius: 50px;
+            transition: all .5s;
+    
+            &:hover {
+              color: #fff;
+              box-shadow: 0 0 20px #f07dff25;
+              transform: scale(1.1);
+              transition: .3s;
+            }
   
-          &:hover {
-            color: #fff;
-            box-shadow: 0 0 20px #f07dff25;
-            transform: scale(1.1);
-            transition: .3s;
-          }
-
-          &:active {
-            transform: scale(.8);
-            transition: 0s;
+            &:active {
+              transform: scale(.8);
+              transition: 0s;
+            }
           }
         }
+  
       }
     }
   }
