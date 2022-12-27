@@ -5,7 +5,7 @@ export default function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>vicode</title>
+        <title>My portfolio</title>
       </Head>
        <Component {...pageProps} />
     </>

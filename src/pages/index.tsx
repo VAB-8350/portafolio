@@ -47,7 +47,7 @@ export default function Home() {
             <span onClick={nextContact}><FaInbox /> Contact</span>
           </div>
 
-          <h2><Image src={vicode} alt="logo personal" /> Mi Portafolio</h2>
+          <h2><Image src={vicode} alt="logo personal" />My portfolio</h2>
         </nav>
         
         <div className={Style.body}>
