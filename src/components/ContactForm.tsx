@@ -41,20 +41,19 @@ export default function ContactForm() {
     }
     
     const res = validate(data)
+    console.table(res)
 
     if (res.success) {
       
       emailjs.send('service_lez93bu','template_enk301m', res.data, 'zaTFH0rBAWvpOMguG')
         .then((response) => {
           setMessage('your message was sent successfully')
-          setLoading(false)
         }, (err) => {
           setMessage('Upps! tuvimos un problema con el envio')
-          setLoading(false)
         })
-
     }
 
+    setLoading(false)
   } 
 
   const validate = data => {
@@ -63,6 +62,10 @@ export default function ContactForm() {
     const name    = data.name.length >= 2
     const email   = regex.test(data.email)
     const message = data.message.length >= 10
+
+    !message && setMessage('The message must contain more than 10 characters')
+    !email   && setMessage('Wrong email format')
+    !name    && setMessage('The name must contain more than 2 characters')
 
     if (name && email && message) {
       return {success:true , data}
@@ -112,7 +115,7 @@ export default function ContactForm() {
         <div className={Style.contentBtn} >
           <span 
             className={
-              `${message.length > 0 ? Style.active : ''} ${message.includes('successfully') ? Style.green : ''} ${message.includes('Upps!') ? Style.red : ''}`
+              `${message.length > 0 ? Style.active : ''} ${message.includes('successfully') ? Style.green : Style.red}`
             }
             >
             <p>{message}</p>
