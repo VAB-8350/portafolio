@@ -15,7 +15,7 @@ export default function ContactForm() {
 
   // Local state
   const [message, setMessage] = useState('')
-  const [loading, setLoading] = useState(false)
+  const [load, setLoad] = useState(false)
 
   useEffect(() => {
     if (message.length > 0) {
@@ -24,13 +24,12 @@ export default function ContactForm() {
       }, 10000)
     }
   }, [message])
-  
 
   // Methids
   const handlerSubmit = (e) => {
     e.preventDefault();
 
-    setLoading(true)
+    setLoad(true)
 
     const form = new FormData(formRef.current)
 
@@ -41,7 +40,6 @@ export default function ContactForm() {
     }
     
     const res = validate(data)
-    console.table(res)
 
     if (res.success) {
       
@@ -50,10 +48,14 @@ export default function ContactForm() {
           setMessage('your message was sent successfully')
         }, (err) => {
           setMessage('Upps! tuvimos un problema con el envio')
-        })
+        }).finally(() => setLoad(false))
+
+    } else {
+
+      setLoad(false)
+
     }
 
-    setLoading(false)
   } 
 
   const validate = data => {
@@ -123,9 +125,9 @@ export default function ContactForm() {
           <button type="submit" >
             Send 
             {
-              loading
-              ? <FaCompactDisc className={Style.loading}/>
-              : <FaCaretRight/>
+              load
+                ? <FaCompactDisc className={Style.loading}/>
+                : <FaCaretRight/>
             }
           </button>
         </div>
