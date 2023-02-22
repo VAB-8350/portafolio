@@ -9,18 +9,14 @@ import projects from 'data/projects'
 
 // Images
 import profilePic from '@public/images/me.png'
-import css from '@public/images/icons/css.png'
-import html from '@public/images/icons/html.png'
-import javascript from '@public/images/icons/javascript.png'
-import react from '@public/images/icons/react.png'
-import typescript from '@public/images/icons/typescript.png'
-import next from '@public/images/icons/next.png'
 import vicode from '@public/images/icons/vicode.png'
 
 // Components
 import Visual from '@components/Visual'
 import ProjectCard from '@components/ProjectCard'
 import ContactForm from '@components/ContactForm'
+import Tecnologies from '@components/Tecnologies'
+import AboutMe from '@components/AboutMe'
 
 export default function Home() {
   
@@ -67,54 +63,9 @@ export default function Home() {
 
         <section className={Style.aboutMe} ref={about} >
 
-          <div className={Style.tecnologies}>
-            <h2>Tecnologies</h2>
-            <div>
-              <span>
-                <Image src={javascript} alt="logo javascript" />
-                <span>JavaScript</span>
-              </span>
-              <span>
-                <Image src={react} alt="logo react" />
-                <span>React</span>
-              </span>
-              <span>
-                <Image src={css} alt="logo css" />
-                <span>CSS</span>
-              </span>
-              <span>
-                <Image src={html} alt="logo html" />
-                <span>HTML</span>
-              </span>
-            </div>
-
-            <h3>I am learning</h3>
-            <div className={Style['want-lern']}>
-              <span>
-                <Image src={typescript} alt="logo typescript" />
-                <span>TypeScript</span>
-              </span>
-              <span>
-                <Image src={next} alt="logo next js" />
-                <span>Next js</span>
-              </span>
-            </div>
-          </div>
-
-          <div className={Style['about-me']}>
-            <h2>About me</h2>
-            <p>
-              After coming across the gigantic and exciting world of software development, I decided to focus on web development, thirsty to learn and improve my work to offer more robust and reliable solutions.
-              <br/><br/>
-
-              I like being able to contribute ideas to the team and learn from their experiences,
-              to achieve the best possible result by committing to the project and the client.
-              <br/><br/>
-
-              I am currently working in Devias as a Front-end developer, about 1 year ago. I add my experience in ArboT, (a robotics company). Although I did not use the same technologies,
-              I used logical thinking focused on problem-solving. That made my entry into web software development much more accessible.
-            </p>
-          </div>
+          <AboutMe />
+          <Tecnologies />
+          
         </section>
 
         <section className={Style.projects}>
