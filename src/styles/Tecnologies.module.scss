@@ -16,6 +16,10 @@
     width: 100%;
   }
 
+  @media (max-width: 700px) {
+    margin-top: 50px;
+  }
+
   .tabs {
     position: absolute;
     left: -50px;
@@ -23,8 +27,16 @@
     display: flex;
     gap: 10px;
     align-items: flex-end;
-    transform: rotate(180deg);
     writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    
+    @media (max-width: 700px) {
+      left: 0;
+      top: -50px;
+      align-items: flex-start;
+      writing-mode:horizontal-tb;
+      transform: rotate(0deg);
+    }
     
     span {
       font-size: 2rem;
@@ -51,12 +63,33 @@
         bottom: 100%;
         opacity: 0;
       }
+
+      @media (max-width: 700px) {
+        height: 50px;
+        width: auto;
+        padding: 0 20px;
+        border-radius: 10px 10px 0 0;
+        
+
+        &::after {
+          height: 3px;
+          width: 100%;
+          bottom: 0;
+          right: 100%;
+        }
+      }
       
       &:hover {
         cursor: pointer;
         transform: translate(10px);
         width: 60px;
         transition: .2s;
+
+        @media (max-width: 700px) {
+          width: auto;
+          height: 60px;
+          transform: translateY(-10px);
+        }
       }
       
       &.active {
@@ -66,9 +99,19 @@
           bottom: 0;
           transition: .5s;
         }
-        transform: translate(10px);
+        transform: translateX(10px);
         width: 60px;
         transition: .3s;
+
+        @media (max-width: 700px) {
+          width: auto;
+          height: 60px;
+          transform: translateY(-10px);
+
+          &::after {
+            right: 0;
+          }
+        }
       }
     }
   }
