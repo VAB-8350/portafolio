@@ -18,7 +18,8 @@ export default function Visual() {
   useEffect(() => {
     var today = new Date()
     var birth = new Date(1999, 4, 29);
-    var edad = today.getFullYear() - birth.getFullYear();
+    var edad = today.getTime() - birth.getTime();
+    edad = Math.floor(edad / 31536000000)
 
     const element = document.getElementById("visual-card")
     VanillaTilt.init(element, {
