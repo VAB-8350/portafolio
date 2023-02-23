@@ -1,15 +1,87 @@
 .background {
-  background-image: url('../../public/images/background4.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
+  width: 100%;
   z-index: -1;
-  opacity: .5;
+}
+
+.bird1 {
+  position: fixed;
+  width: 100px;
+  object-fit: contain;
+  right: 100%;
+  top: 100px;
+  animation: fly 40s linear infinite;
+
+  @keyframes fly {
+    0% {
+      right: -100px;
+      top: 100px;
+    }
+
+    40% {
+      top: 200px;
+    }
+
+    60% {
+      top: 150px;
+    }
+
+    100% {
+      right: 100%;
+      top: 0;
+    }
+  }
+}
+
+.star, .star2 {
+  position: fixed;
+  width: 100px;
+  object-fit: contain;
+  right: 50%;
+  top: -150px;
+  
+  &.star {
+    transform: rotateZ(20deg);
+    animation: star 10s linear infinite;
+  }
+
+  &.star2 {
+    transform: rotateZ(15deg);
+    animation: star2 10s linear infinite;
+    animation-delay: 5s;
+  }
+
+  @keyframes star {
+    0% {
+      right: 50%;
+      top: -150px;
+    }
+
+    100% {
+      right: 100%;
+      top: 100px;
+      opacity: 0;
+    }
+  }
+
+  @keyframes star2 {
+    0% {
+      right: 0%;
+      top: -150px;
+    }
+
+    80% {
+      opacity: 0;
+    }
+
+    100% {
+      right: 50%;
+      top: 200px;
+      opacity: 0;
+    }
+  }
 }
 
 .head {
@@ -144,8 +216,12 @@
   width: 100%;
   padding: 100px 70px;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
 
   @media (max-width: 700px) {
+    gap: 30px;
     padding: 30px;
     margin-top: -70px;
   }
@@ -162,6 +238,25 @@
     }
   }
 
+  .experience {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+      display: inline;
+      text-align: center;
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 4rem;
+      font-family: Ubuntu;
+      margin: 70px 0;
+
+      @media (max-width: 700px) {
+        margin: 50px 0;
+      }
+    }
+  }
+
   .projects {
     display: flex;
     flex-direction: column;
@@ -173,7 +268,7 @@
       color: rgba(255, 255, 255, 0.7);
       font-size: 4rem;
       font-family: Ubuntu;
-      margin: 100px 0;
+      margin: 70px 0;
 
       @media (max-width: 700px) {
         margin: 50px 0;
@@ -228,23 +323,31 @@
   a {
     box-sizing: border-box;
     padding: 5px;
-    color: rgba(255, 255, 255, 0.7);
-
+    border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+    transition: .6s;
+    
     &:hover {
-      color: rgba(209, 113, 238, 0.5);
+      color: #bb9af7;
+      color: #7dcfff;
+      border: 2px solid #7dcfff;
+      box-shadow: 0 0 10px #7dcfff;
+      border-radius: 50%;
+      transform: scale(1.1) rotateZ(90deg);
+      transition: .4s;
+    }
+    
+    .icons {
+      font-size: 4rem;
+      padding: 7px;
+      border-radius: 6px;
+      color: rgba(255, 255, 255, 0.7);
+      transition: all .2s ;
     }
 
     &:hover .icons{
-      padding-bottom: 15px;
-      transition: all .3s ease-in-out;
-    }
-
-    .icons {
-      font-size: 3rem;
-      padding: 7px;
-      border-radius: 6px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.7);
-      transition: all .5s ease-in-out;
+      color: #7dcfff;
+      transform: rotateZ(-90deg);
+      transition: all .2s ;
     }
   }
 }

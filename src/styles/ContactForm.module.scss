@@ -59,8 +59,12 @@
         border-radius: 5px;
         padding: 10px;
         border: none;
-        border-bottom: 3px solid #772e7adc;
+        border-bottom: 3px solid #7dcfff;
         outline: none;
+        
+        &::placeholder {
+          color: rgba(255, 255, 255, 0.5);
+        }
       }
 
       textarea {
@@ -71,8 +75,12 @@
         border-radius: 5px;
         padding: 10px;
         border: none;
-        border-bottom: 3px solid #772e7adc;
+        border-bottom: 3px solid #7dcfff;
         outline: none;
+
+        &::placeholder {
+          color: rgba(255, 255, 255, 0.5);
+        }
       }
     }
 

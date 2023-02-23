@@ -1,0 +1,195 @@
+.experience {
+  display: flex;
+  gap: 15px;
+  width: 100%;
+  min-height: 100%;
+  box-sizing: border-box;
+  min-height: 400px;
+  max-height: 500px;
+
+  .work-list {
+    width: 40%;
+    padding: 0 15px;
+    border-right: 2px solid #7dcfff;
+
+    h3 {
+      display: block;
+      text-align: center;
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 3rem;
+      font-family: Ubuntu;
+      margin: 0;
+      height: 60px;
+    }
+
+    ul {
+      list-style: none;
+      background-color: rgba(0, 0, 0, 0.4);
+      box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(3px);
+      border-radius: 15px;
+      height: calc(100% - 60px);
+      overflow-x: hidden;
+      overflow-y: auto;
+      padding: 0 15px;
+      transition: .4s;
+
+      &:hover {
+        box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(10px);
+        transition: .2s;
+      }
+
+      .active {
+        font-size: 2.3rem;
+        border-bottom: 2px solid #7dcfff;
+        transition: .4s;
+      }
+
+      li {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 2rem;
+        font-family: Ubuntu;
+        line-height: 30px;
+        padding: 25px 20px 5px;
+        border-bottom: 2px solid #bb9af7;
+        transition: .4s;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        span {
+          display: list;
+          font-size: 1.4rem;
+          text-align: end;
+        }
+
+        &:hover {
+          font-size: 2.3rem;
+          transform: translateX(10px);
+          border-bottom: 2px solid #7dcfff;
+          transition: .4s;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .content {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    .btn-container {
+      display: flex;
+      width: 100%;
+      gap: 15px;
+
+      .active {
+        font-size: 2.3rem;
+          color: rgba(255, 255, 255, 0.7);
+          box-shadow: 0 10px 50px #bb9af762;
+          backdrop-filter: blur(10px);
+          border-left: 15px solid #bb9af7;
+          border-right: 15px solid #bb9af7;
+          border-radius: 50px;
+          transform: rotateY(1deg) ;
+          cursor: pointer;
+          transition: .4s;
+      }
+
+      button {
+        width: 50%;
+        height: 45px;
+        border-radius: 7px;
+        background-color: rgba(0, 0, 0, 0.5);
+        border: none;
+        border-left: 3px solid #bb9af7;
+        border-right: 3px solid #bb9af7;
+        color: rgba(255, 255, 255, 0.4);
+        font-size: 2rem;
+        font-weight: bold;
+        font-family: Ubuntu;
+        transition: .6s;
+
+        &:hover {
+          font-size: 2.3rem;
+          color: rgba(255, 255, 255, 0.7);
+          box-shadow: 0 10px 50px #bb9af762;
+          backdrop-filter: blur(10px);
+          border-left: 15px solid #bb9af7;
+          border-right: 15px solid #bb9af7;
+          border-radius: 50px;
+          transform: rotateY(1deg) ;
+          cursor: pointer;
+          transition: .4s;
+        }
+      }
+    }
+
+    .hidden {
+      transform: scale(0);
+      transform-origin: left;
+      opacity: 0;
+      position: absolute;
+      top: 15px;
+      transition: .6s;
+    }
+
+    .text-content {
+      border-radius: 15px;
+      background-color: rgba(0, 0, 0, 0.4);
+      box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(3px);
+      min-height: calc(100% - 60px);
+      padding: 15px;
+      transition: .4s;
+
+      &:hover {
+        box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(10px);
+        transition: .2s;
+      }
+
+      div {
+        transition: .6s;
+        transition-delay: .6s;
+        
+        p {
+          color: rgba(255, 255, 255, 0.7);
+          font-size: 1.8rem;
+          font-family: Ubuntu;
+          line-height: 30px;
+          transition: .6s;
+        }
+
+        ul {
+          margin-left: 20px;
+          color: rgba(255, 255, 255, 0.7);
+          font-size: 1.8rem;
+          font-family: Ubuntu;
+          line-height: 30px;
+          transition: .6s;
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+
+          a {
+            text-decoration: none;
+            color: #7dcfff;
+          }
+        }
+
+        &.hidden {
+          transform: scale(0);
+          transform-origin: left;
+          opacity: 0;
+          position: absolute;
+          top: 15px;
+          transition: .6s;
+        }
+      }
+    }
+  }
+}
