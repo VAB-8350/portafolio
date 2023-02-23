@@ -4,7 +4,30 @@
   box-sizing: border-box;
   padding: 20px;
   border-radius: 15px;
-  border: 2px solid rgba(255, 255, 255, 0.7);
+  background-color: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(3px);
+  transition: .3s;
+  border-left: 3px solid #bb9af7;
+  border-right: 3px solid #bb9af7;
+
+  &:hover {
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    transition: .2s;
+  }
+
+  @keyframes before {
+    0% {
+      transform: translateY(10px);
+    }
+    50% {
+      transform: translateY(10px);
+    }
+    100% {
+      transform: translateY(10px);
+    }
+  }
   
   @media (max-width: 820px) {
     width: 100%;

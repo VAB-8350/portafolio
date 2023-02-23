@@ -1,6 +1,7 @@
 // External module
 import React, { useEffect, useState } from 'react'
 import Image, { StaticImageData } from 'next/image'
+import VanillaTilt from 'vanilla-tilt'
 
 import css from '@public/images/icons/css.png'
 import html from '@public/images/icons/html.png'
@@ -48,6 +49,12 @@ export default function ProjectCard() {
   const [showTecnologie, setShowTecnologie] = useState('webTecnologies')
   
   useEffect(() => {
+
+    const element = document.getElementById("technologies")
+    VanillaTilt.init(element, {
+      max: 7,
+		  speed: 400,
+    })
 
     const webTecnologies: Technologies = {
       work: [
@@ -150,32 +157,33 @@ export default function ProjectCard() {
   }, [])
 
   return (
-    <div className={Style.tecnologies}>
+    <div className={Style.tecnologies} id='technologies'>
       <section className={Style.tabs}>
 
         <span 
-          className={showTecnologie === 'robotTecnologies' ? Style.active : ''} 
-          onClick={() => setShowTecnologie('robotTecnologies')}
+          className={showTecnologie === 'webTecnologies' ? Style.active : ''}
+          onClick={() => setShowTecnologie('webTecnologies')}
         >
-          Robot
+          FRONT
         </span>
 
         <span 
           className={showTecnologie === 'complementary' ? Style.active : ''}
           onClick={() => setShowTecnologie('complementary')}
         >
-          Infra
+          INFRA
         </span>
-        
+
         <span 
-          className={showTecnologie === 'webTecnologies' ? Style.active : ''}
-          onClick={() => setShowTecnologie('webTecnologies')}
+          className={showTecnologie === 'robotTecnologies' ? Style.active : ''} 
+          onClick={() => setShowTecnologie('robotTecnologies')}
         >
-          Front
-        </span>
+          ROBOT
+        </span>        
+        
       </section>
   
-      <h2>Tecnologies</h2>
+      <h2>Technologies</h2>
       <div className={showTecnologie !== 'webTecnologies' ? Style.hidden: ''}>
         {
           tecnologies?.webTecnologies?.work.map(technology => 

@@ -1,13 +1,21 @@
 // External module
-import React from 'react'
-
+import React, { useEffect } from 'react'
+import VanillaTilt from 'vanilla-tilt'
 // Internal module
 import Style from '@styles/AboutMe.module.scss'
 
 export default function ProjectCard() {
 
+  useEffect(() => {
+    const element = document.getElementById("about-me")
+    VanillaTilt.init(element, {
+      max: 7,
+		  speed: 400,
+    })
+  }, [])
+
   return (
-    <div className={Style['about-me']}>
+    <div className={Style['about-me']} id='about-me'>
       <h2>About me</h2>
 
       <p>
