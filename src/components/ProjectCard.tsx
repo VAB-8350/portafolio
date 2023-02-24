@@ -14,19 +14,18 @@ export default function ProjectCard({title, img, description, linkProject, linkC
   return (
     <div className={Style['project-card']}>
 
-      <div className={Style['head-card']}>
         <Image src={img} alt={`Project ${title}`} />
-        <div>
-          <Link href={linkProject} target='_blank'><FaGlobe/>See Page</Link>
+
+        <div className={Style.links}>
+          <Link href={linkProject} target='_blank'><FaGlobe className={Style.icon}/>See Page</Link>
           <Link
             style={isPrivate ? {cursor: "not-allowed"} : {}}
             onClick={(e) => isPrivate && e.preventDefault()} href={linkCode}
             target='_blank'
           >
-              {isPrivate ? <FaLock/> : <FaGithub />}Code {isPrivate && 'Priv'}
+              {isPrivate ? <FaLock className={Style.icon}/> : <FaGithub className={Style.icon}/>}Code {isPrivate && 'Priv'}
           </Link>
         </div>
-      </div>
 
       <div className={Style['card-description']}>
         <h3>{title}</h3>
