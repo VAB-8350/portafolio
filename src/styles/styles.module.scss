@@ -320,8 +320,9 @@
   align-items: center;
   justify-content: center;
   gap: 50px;
+  position: relative;
 
-  a {
+  & > a {
     box-sizing: border-box;
     padding: 5px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.7);
@@ -349,6 +350,26 @@
       color: #7dcfff;
       transform: rotateZ(-90deg);
       transition: all .2s ;
+    }
+  }
+
+  span {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    right: 50px;
+    
+    a {
+      text-decoration: none;
+      font-size: 1.3rem;
+      font-weight: bold;
+      font-family: Ubuntu;
+      color: rgba(255, 255, 255, 0.7);
+      
+      &:hover {
+        color: #7dcfff;
+      }
     }
   }
 }

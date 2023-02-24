@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { FaUser, FaInbox, FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa"
+import { FaUser, FaInbox, FaLinkedin, FaGithub, FaEnvelope} from "react-icons/fa"
 
 // Internal module
 import Style from '@styles/styles.module.scss'
@@ -131,6 +131,8 @@ export default function Home() {
         <Link target='_blank' href="mailto:victor.barilin2014@gmail.com">
           <FaEnvelope className={Style.icons} />
         </Link>
+
+        <span><a href="https://github.com/VAB-8350/portafolio">Developed by Victor Andres Barilin <FaGithub/></a></span>
       </footer>
     </div>
   )
