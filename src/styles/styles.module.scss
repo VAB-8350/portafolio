@@ -326,12 +326,15 @@
 
 .footer {
   background-color: rgba(0, 0, 0, 0.3);
-  height: 100px;
+  min-height: 100px;
+  padding: 20px 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 50px;
+  column-gap: 50px;
+  row-gap: 30px;
   position: relative;
+  flex-wrap: wrap;
 
   & > a {
     box-sizing: border-box;
@@ -370,6 +373,11 @@
     gap: 10px;
     position: absolute;
     right: 50px;
+
+    @media (max-width: 960px) {
+      right: auto;
+      position: relative;
+    }
     
     a {
       text-decoration: none;
