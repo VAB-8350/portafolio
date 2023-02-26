@@ -11,6 +11,14 @@ export default function Document() {
         <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5" />
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
+
+        <meta name="robots" content="index,follow" />
+        <link rel="canonical" href="https://www.victorbarilin.com" />
+        <meta name="author" content="Victor Andres Barilin" />
+
+        <meta property="og:title" content="Mi portfolio - Mi sitio web - victorbarilin" />
+        <meta property="og:description" content="Portafolio web personal, desarrollador en reactjs junior" />
+        <meta name="keywords" content="Desarrollador web, React, Front-end, Portafolio, victorbarilin, Programador, Developer" />
       </Head>
       <body>
         <Main />
