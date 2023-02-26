@@ -52,8 +52,10 @@ export default function Home() {
   return (
     <div className={Style.container}>
       <Image className={Style.background} id='background' src={background} alt='background' />
-      <Image className={Style.star} src={star} alt='star' />
-      <Image className={Style.star2} src={star} alt='star' />
+      <div className={Style['content-stars']}>
+        <Image className={Style.star} src={star} alt='star' />
+        <Image className={Style.star2} src={star} alt='star' />
+      </div>
       <Image className={Style.bird1} src={bird1} alt='bird' />
       
       <header className={Style.head}>
