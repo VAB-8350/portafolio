@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { FaUser, FaInbox, FaLinkedin, FaGithub, FaEnvelope} from "react-icons/fa"
+import axios from 'axios'
 
 // Internal module
 import Style from '@styles/styles.module.scss'
@@ -136,4 +137,27 @@ export default function Home() {
       </footer>
     </div>
   )
+}
+
+export const getServerSideProps = async (context) => {
+
+  const userAgent = context.req.headers['user-agent']
+
+  const ip = context.req.headers['x-real-ip'] || context.req.socket.remoteAddress
+  
+  // Aquí envías la petición a la API de Telegram
+  try {
+    const message = `Nuevo usuario en la página! IP: ${ip}, Navegador: ${userAgent}`
+
+    const telegramApiUrl = `https://api.telegram.org/bot${process.env.TELEGRAM_API_KEY}/sendMessage`
+
+    await axios.post(telegramApiUrl, {
+      chat_id: process.env.TELEGRAM_CHAT_ID,
+      text: message,
+    })
+
+  } catch (error) {
+  }
+
+  return { props: {} }
 }
