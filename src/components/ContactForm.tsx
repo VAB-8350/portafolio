@@ -81,7 +81,7 @@ export default function ContactForm() {
         src={fromimage}
         alt='Imagen de formulario'
       />
-      
+
       <form onSubmit={handlerSubmit} ref={formRef}>
 
         <div>

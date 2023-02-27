@@ -1,12 +1,23 @@
 import React, { useEffect, useRef } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { FaUser, FaInbox, FaLinkedin, FaGithub, FaEnvelope} from "react-icons/fa"
+import { FaUser,
+  FaInbox,
+  FaLinkedin,
+  FaGithub,
+  FaEnvelope,
+  FaCameraRetro,
+  FaTasks,
+  FaBriefcase,
+  FaGripHorizontal,
+  FaGamepad,
+  FaGoogle
+} from "react-icons/fa"
 import axios from 'axios'
 
 // Internal module
 import Style from '@styles/styles.module.scss'
-import projects from 'data/projects'
+// import projects from 'data/projects'
 
 // Images
 import profilePic from '@public/images/me.png'
@@ -36,6 +47,57 @@ export default function Home() {
   const nextContact = () => {
     contact.current?.scrollIntoView({block: 'center', behavior: 'smooth'})
   }
+
+  const projects = [
+    // buckedup
+    {
+      title: 'My current job',
+      description: 'In my current job we are developing an Ecommerce, this is for a U.S. company focused on fitness products.',
+      linkCode: 'private',
+      linkProject: 'https://www.buckedup.com',
+      logo: <FaBriefcase />
+    },
+    // To do
+    {
+      title: 'Task list',
+      description: 'I made this project in a react course in platzi, it has a design more appropriate to mobile.',
+      linkCode: 'https://github.com/VAB-8350/Platzi---Todos',
+      linkProject: 'https://vab-8350.github.io/Platzi---Todos/',
+      logo: <FaTasks />
+    },
+    // Movies
+    {
+      title: 'Movies App',
+      description: 'Course of platzi api rest consumption (done only with HTML CSS and vanilla JavaScript)',
+      linkCode: 'https://github.com/VAB-8350/curso-practico-api-rest---Platzi',
+      linkProject: 'https://vab-8350.github.io/curso-practico-api-rest---Platzi/',
+      logo: <FaCameraRetro />
+    },
+    // Grid
+    {
+      title: 'test with CSS grid',
+      description: 'Platzi course specialized in the use of display grid',
+      linkCode: 'https://github.com/VAB-8350/Platzi---test_CSS_grid',
+      linkProject: 'https://vab-8350.github.io/Platzi---test_CSS_grid/',
+      logo: <FaGripHorizontal />
+    },
+    // Rabbit
+    {
+      title: 'Mini rabbit game',
+      description: 'This project was made in a course of animations in platzi',
+      linkCode: 'https://github.com/VAB-8350/rabbit-game',
+      linkProject: 'https://vab-8350.github.io/rabbit-game/',
+      logo: <FaGamepad />
+    },
+    // Clone
+    {
+      title: 'Google clone',
+      description: 'Platzi course (style practice)',
+      linkCode: 'https://github.com/VAB-8350/Platzi---Mi_clon_google',
+      linkProject: 'https://vab-8350.github.io/Platzi---Mi_clon_google/',
+      logo: <FaGoogle />
+    },
+  ]
 
   useEffect(() => {
 
@@ -104,7 +166,7 @@ export default function Home() {
               projects.map((project, index) => (
                 <ProjectCard
                   key={index}
-                  img={project.img}
+                  logo={project.logo}
                   linkCode={project.linkCode}
                   linkProject={project.linkProject}
                   title={project.title}

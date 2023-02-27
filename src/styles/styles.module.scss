@@ -41,6 +41,7 @@
   height: 100vh;
   position: fixed;
   transform: rotate(-40deg);
+  z-index: -1;
 
   .star, .star2 {
     position: fixed;
