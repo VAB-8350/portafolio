@@ -61,8 +61,8 @@ export default function Home() {
     {
       title: 'Task list',
       description: 'I made this project in a react course in platzi, it has a design more appropriate to mobile.',
-      linkCode: 'https://github.com/VAB-8350/Platzi---Todos',
-      linkProject: 'https://vab-8350.github.io/Platzi---Todos/',
+      linkCode: 'https://github.com/VAB-8350/task-list',
+      linkProject: 'https://task.victorbarilin.com',
       logo: <FaTasks />
     },
     // Movies
