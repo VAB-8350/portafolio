@@ -17,14 +17,13 @@ import axios from 'axios'
 
 // Internal module
 import Style from '@styles/styles.module.scss'
-// import projects from 'data/projects'
 
 // Images
 import profilePic from '@public/images/me.png'
 import vicode from '@public/images/icons/vicode.png'
-import background from '@public/images/background4.png'
 import bird1 from '@public/images/bird1.png'
 import star from '@public/images/star.png'
+import background from '@public/images/background.png'
 
 // Components
 import Visual from '@components/Visual'
@@ -99,26 +98,14 @@ export default function Home() {
     },
   ]
 
-  useEffect(() => {
-
-    const back = document.getElementById('background')
-
-    window.addEventListener('scroll', () => {
-      let value = window.scrollY
-
-      back.style.top = value * -.02 + 'px'
-    })
-
-  }, [])
-
   return (
     <div className={Style.container}>
       <Image className={Style.background} id='background' src={background} alt='background' />
       <div className={Style['content-stars']}>
         <Image className={Style.star} src={star} alt='star' />
         <Image className={Style.star2} src={star} alt='star' />
+        <Image className={Style.star3} src={star} alt='star' />
       </div>
-      <Image className={Style.bird1} src={bird1} alt='bird' />
       
       <header className={Style.head}>
 

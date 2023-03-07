@@ -1,9 +1,8 @@
 .background {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  object-fit: cover;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
   z-index: -1;
 }
 
@@ -43,7 +42,7 @@
   transform: rotate(-40deg);
   z-index: -1;
 
-  .star, .star2 {
+  .star, .star2, .star3 {
     position: fixed;
     object-fit: contain;
     width: 150px;
@@ -63,18 +62,20 @@
       top: 60%;
       animation-delay: 4s;
     }
+
+    &.star3 {
+      animation: star 7s linear infinite;
+      top: 100%;
+      animation-delay: 2s;
+    }
   
     @keyframes star {
       0% {
         right: -100%;
       }
-
-      80% {
-        opacity: 0;
-      }
   
       100% {
-        opacity: 0;
+        opacity: .2;
         right: 100%;
       }
     }
@@ -85,12 +86,11 @@
       }
 
       65% {
-        opacity: 0;
-      }
-  
-      100% {
-        opacity: 0;
         right: 100%;
+      }
+      
+      80% {
+        opacity: 0;
       }
     }
   }
