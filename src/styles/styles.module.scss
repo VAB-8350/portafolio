@@ -3,36 +3,8 @@
   inset: 0;
   width: 100vw;
   height: 100vh;
+  object-fit: cover;
   z-index: -1;
-}
-
-.bird1 {
-  position: fixed;
-  width: 100px;
-  object-fit: contain;
-  right: 100%;
-  top: 100px;
-  animation: fly 40s linear infinite;
-
-  @keyframes fly {
-    0% {
-      right: -100px;
-      top: 100px;
-    }
-
-    40% {
-      top: 200px;
-    }
-
-    60% {
-      top: 150px;
-    }
-
-    100% {
-      right: 100%;
-      top: 0;
-    }
-  }
 }
 
 .content-stars {
