@@ -22,6 +22,7 @@ import github from '@public/images/icons/github.png'
 import linux from '@public/images/icons/linux.png'
 import figma from '@public/images/icons/figma.png'
 import docker from '@public/images/icons/docker.png'
+import blender from '@public/images/icons/blender.png'
 
 // Internal module
 import Style from '@styles/Tecnologies.module.scss'
@@ -116,6 +117,10 @@ export default function ProjectCard() {
         {
           img: fusion,
           name: 'Fusion 360'
+        },
+        {
+          img: blender,
+          name: 'Blender'
         },
         {
           img: eagle,
