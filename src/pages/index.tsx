@@ -21,7 +21,6 @@ import Style from '@styles/styles.module.scss'
 // Images
 import profilePic from '@public/images/me.png'
 import vicode from '@public/images/icons/vicode.png'
-import bird1 from '@public/images/bird1.png'
 import star from '@public/images/star.png'
 import background from '@public/images/background.png'
 
