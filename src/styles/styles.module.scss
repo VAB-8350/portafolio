@@ -213,7 +213,6 @@
           background-repeat: no-repeat;
           background-size: contain;
           left: 0;
-          filter: drop-shadow(0px 0px 30px rgb(24, 221, 247));
         }
         
         &::after {
@@ -222,7 +221,7 @@
           background-image: url('./../../public/images/icons/vscode.png');
           top: 50%;
           animation: rotateStar1 4s ease-in-out infinite;
-
+          filter: drop-shadow(0px 0px 30px rgb(24, 221, 247));
         }
 
         @keyframes rotateStar1 {
@@ -249,9 +248,10 @@
         &::before {
           width: 40px;
           height: 40px;
-          background-image: url('./../../public/images/icons/react.png');
+          background-image: url('./../../public/images/icons/platzi.png');
           top: 70%;
           animation: rotateStar2 5s ease-in-out .4s infinite;
+          filter: drop-shadow(0px 0px 30px rgb(30, 255, 0));
         }
 
         @keyframes rotateStar2 {
