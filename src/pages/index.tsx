@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useRef } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { FaUser,
@@ -100,6 +100,7 @@ export default function Home() {
   return (
     <div className={Style.container}>
       <Image className={Style.background} id='background' src={background} alt='background' />
+
       <div className={Style['content-stars']}>
         <Image className={Style.star} src={star} alt='star' />
         <Image className={Style.star2} src={star} alt='star' />

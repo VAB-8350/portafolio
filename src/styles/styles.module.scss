@@ -184,6 +184,13 @@
   
       picture {
         position: relative;
+        perspective: 150px;
+        transform-style: preserve-3d;
+        transition: .6s;
+        &:hover {
+          transform: scale(1.2);
+          transition: .4s;
+        }
   
         img {
           width: 100%;
@@ -192,23 +199,75 @@
           filter: drop-shadow(10px 10px 20px rgb(0 0 0 / 50%));
           transform: scale(.8);
         }
-        // &::after {
-        //   content: 'IMAGE IN PROCESS';
-        //   position: absolute;
-        //   top: 40%;
-        //   left: -10%;
-        //   text-align: center;
-        //   font-size: 6rem;
-        //   font-weight: bold;
-        //   width: 100%;
-        //   font-family: Ubuntu;
-        //   transform: rotate(-35deg);
-        //   color: rgba(0, 0, 0, 0.8);
-        //   background-color: #ffe600b2;
-        //   box-shadow: 0 0 30px black;
-        //   padding: 10px;
-        //   border-radius: 8px;
-        // }
+
+        &::after, &::before {
+          content: '';
+          position: absolute;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: contain;
+          left: 0;
+          filter: drop-shadow(10px 10px 20px rgba(71, 217, 236, 0.5));
+        }
+        
+        &::after {
+          width: 40px;
+          height: 40px;
+          background-image: url('./../../public/images/icons/vscode.png');
+          top: 50%;
+          animation: rotateStar1 4s ease-in-out infinite;
+
+        }
+
+        @keyframes rotateStar1 {
+          0% {
+            left: 0;
+            transform: translateZ(0px);
+          }
+          25% {
+            transform: translateZ(-60px);
+          }
+          50% {
+            left: 90%;
+            transform: translateZ(0px);
+            top: 70%;
+          }
+          75% {
+            transform: translateZ(30px);
+          }
+          100% {
+            left: 0;
+          }
+        }
+
+        &::before {
+          width: 40px;
+          height: 40px;
+          background-image: url('./../../public/images/icons/react.png');
+          top: 70%;
+          animation: rotateStar2 4s ease-in-out .4s infinite;
+        }
+
+        @keyframes rotateStar2 {
+          0% {
+            left: 0;
+            transform: translateZ(0px);
+          }
+          25% {
+            transform: translateZ(-50px);
+          }
+          50% {
+            left: 90%;
+            transform: translateZ(0px);
+            top: 30%;
+          }
+          75% {
+            transform: translateZ(30px);
+          }
+          100% {
+            left: 0;
+          }
+        }
       }
     }
   }
