@@ -126,6 +126,9 @@ export default function Home() {
           <section className={Style.right}>
             <picture>
               <Image src={profilePic} alt="me" />
+              <span className={`${Style['rotate-icon']} ${Style.icon1}`} />
+              <span className={`${Style['rotate-icon']} ${Style.icon2}`} />
+              <span className={`${Style['rotate-icon']} ${Style.icon3}`} />
             </picture>
           </section>
         </div>
