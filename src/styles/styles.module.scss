@@ -4,7 +4,18 @@
   width: 100vw;
   height: 100vh;
   object-fit: cover;
-  z-index: -1;
+  z-index: -10;
+}
+
+.background-filter {
+  display: inline-block;
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(39, 0, 43, 0.25);
+  backdrop-filter: blur(5px);
+  z-index: -2;
 }
 
 .content-stars {
@@ -12,7 +23,7 @@
   height: 100vh;
   position: fixed;
   transform: rotate(-40deg);
-  z-index: -1;
+  z-index: -5;
 
   .star, .star2, .star3 {
     position: fixed;
@@ -32,13 +43,13 @@
     &.star2 {
       animation: star2 7s linear infinite;
       top: 60%;
-      animation-delay: 4s;
+      animation-delay: 8s;
     }
 
     &.star3 {
       animation: star 7s linear infinite;
       top: 100%;
-      animation-delay: 2s;
+      animation-delay: 4s;
     }
   
     @keyframes star {
@@ -187,8 +198,8 @@
         perspective: 150px;
         transform-style: preserve-3d;
         transition: .6s;
+
         &:hover {
-          transform: scale(1.1);
           transition: .4s;
 
           img {
@@ -219,7 +230,7 @@
             height: 45px;
             background-image: url('./../../public/images/icons/vscode.png');
             top: 50%;
-            animation: rotateIcon1 4s ease-in-out infinite;
+            animation: rotateIcon1 5s ease-in-out infinite;
             filter: drop-shadow(0px 0px 20px rgb(24, 221, 247));
           }
 
@@ -228,7 +239,7 @@
             height: 45px;
             background-image: url('./../../public/images/icons/platzi.png');
             top: 70%;
-            animation: rotateIcon2 5s ease-in-out .4s infinite;
+            animation: rotateIcon2 7s ease-in-out .4s infinite;
             filter: drop-shadow(0px 0px 20px rgb(30, 255, 0));
           }
 
@@ -237,7 +248,7 @@
             height: 45px;
             background-image: url('./../../public/images/icons/git.png');
             top: 30%;
-            animation: rotateIcon3 3s ease-in-out .4s infinite;
+            animation: rotateIcon3 6s ease-in-out .4s infinite;
             filter: drop-shadow(0px 0px 20px rgb(255, 115, 0));
           }
         }
@@ -379,10 +390,14 @@
       width: 100%;
       margin: 0 40px;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(3, minmax(300px, 1fr));
       place-items: center;
       column-gap: 30px;
       row-gap: 30px;
+
+      @media (max-width: 1250px) {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      }
 
       @media (max-width: 700px) {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));

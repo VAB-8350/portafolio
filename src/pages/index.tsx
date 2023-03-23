@@ -100,6 +100,7 @@ export default function Home() {
   return (
     <div className={Style.container}>
       <Image className={Style.background} id='background' src={background} alt='background' />
+      <span className={Style['background-filter']} />
 
       <div className={Style['content-stars']}>
         <Image className={Style.star} src={star} alt='star' />

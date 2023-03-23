@@ -1,7 +1,6 @@
 // External module
 import React, { useEffect, useState } from 'react'
 import Image, { StaticImageData } from 'next/image'
-import VanillaTilt from 'vanilla-tilt'
 
 import css from '@public/images/icons/css.png'
 import html from '@public/images/icons/html.png'
@@ -50,12 +49,6 @@ export default function ProjectCard() {
   const [showTecnologie, setShowTecnologie] = useState('webTecnologies')
   
   useEffect(() => {
-
-    const element = document.getElementById("technologies")
-    VanillaTilt.init(element, {
-      max: 7,
-		  speed: 400,
-    })
 
     const webTecnologies: Technologies = {
       work: [
@@ -162,7 +155,7 @@ export default function ProjectCard() {
   }, [])
 
   return (
-    <div className={Style.tecnologies} id='technologies'>
+    <div className={Style.tecnologies}>
       <section className={Style.tabs}>
 
         <span 

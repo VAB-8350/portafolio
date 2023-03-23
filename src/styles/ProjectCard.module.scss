@@ -1,5 +1,6 @@
 .project-card {
   width: 100%;
+  max-width: 500px;
   height: 250px;
   background-color: rgba(0, 0, 0, 0.4);
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
@@ -111,7 +112,7 @@
       }
 
       &:hover .icon{
-        transform: rotate(360deg) scale(1.2);
+        transform: scale(1.2);
         transition: .4s;
       }
     }
