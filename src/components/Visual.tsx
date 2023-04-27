@@ -105,10 +105,10 @@ export default function Visual() {
           </p>
 
           <div>
-            <Link href="/pdf/CV-Andres_barilin.pdf" target='_blank' download='CV-Andres_barilin.pdf'>Download CV</Link>
+            <Link href="/pdf/CV-Andres_Barilin.pdf" target='_blank' download='CV-Andres_Barilin.pdf'>Download CV</Link>
 
             <Link
-              href='https://www.canva.com/design/DAFU1phnSlQ/tWjFq8KYUCLshdHhX6Skxw/view?utm_content=DAFU1phnSlQ&utm_campaign=designshare&utm_medium=link&utm_source=homepage_design_menu'
+              href='https://www.canva.com/design/DAFhTqDATvY/JQDoIdbUWj1qJc0N_e8GzA/view?utm_content=DAFhTqDATvY&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink'
               target='_blanck'
             >
               View CV
