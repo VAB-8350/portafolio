@@ -9,9 +9,9 @@ import { FaUser,
   FaCameraRetro,
   FaTasks,
   FaBriefcase,
-  FaGripHorizontal,
   FaGamepad,
-  FaGoogle
+  FaGoogle,
+  FaFigma
 } from "react-icons/fa"
 import axios from 'axios'
 
@@ -73,11 +73,11 @@ export default function Home() {
     },
     // Grid
     {
-      title: 'test with CSS grid',
-      description: 'Platzi course specialized in the use of display grid',
-      linkCode: 'https://github.com/VAB-8350/Platzi---test_CSS_grid',
-      linkProject: 'https://vab-8350.github.io/Platzi---test_CSS_grid/',
-      logo: <FaGripHorizontal />
+      title: 'Figma design',
+      description: 'This is a personal project of a blog, at the moment I am working on the design, but I will also take care of the back-end and the front-end.Platzi course specialized in the use of display grid',
+      linkCode: undefined,
+      linkProject: 'https://www.figma.com/file/7pAu5e0Vu06M8ZoqzLKqcN/Untitled?type=design&node-id=0%3A1&t=HFC8hinkvovhrKLt-1',
+      logo: <FaFigma />
     },
     // Rabbit
     {

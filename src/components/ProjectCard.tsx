@@ -17,13 +17,16 @@ export default function ProjectCard({title, logo, description, linkProject, link
 
         <div className={Style.links}>
           <Link href={linkProject}  target='_blank'><FaExternalLinkAlt className={Style.icon}/></Link>
-          <Link
-            style={isPrivate ? {cursor: "not-allowed"} : {}}
-            onClick={(e) => isPrivate && e.preventDefault()} href={linkCode}
-            target='_blank'
-          >
-              {isPrivate ? <FaLock className={Style.icon}/> : <FaGithub className={Style.icon}/>} {isPrivate && 'Priv'}
-          </Link>
+          {
+            linkCode &&
+            <Link
+              style={isPrivate ? {cursor: "not-allowed"} : {}}
+              onClick={(e) => isPrivate && e.preventDefault()} href={linkCode}
+              target='_blank'
+            >
+                {isPrivate ? <FaLock className={Style.icon}/> : <FaGithub className={Style.icon}/>} {isPrivate && 'Priv'}
+            </Link>
+          }
         </div>
 
       <div className={Style['card-description']}>

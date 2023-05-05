@@ -89,6 +89,10 @@ export default function ProjectCard() {
         {
           img: typescript,
           name: 'TypeScript'
+        },
+        {
+          img: figma,
+          name: 'Figma'
         }
       ]
     }
@@ -136,10 +140,6 @@ export default function ProjectCard() {
         {
           img: linux,
           name: 'Linux'
-        },
-        {
-          img: figma,
-          name: 'Figma'
         }
       ],
       lern: [
