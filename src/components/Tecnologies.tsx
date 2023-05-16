@@ -186,7 +186,7 @@ export default function ProjectCard() {
         {
           tecnologies?.webTecnologies?.work.map(technology => 
             <span>
-              <Image src={technology.img} alt={technology.name} />
+              <Image loading='lazy' src={technology.img} alt={technology.name} />
               <span>{technology.name}</span>
             </span>
           )
@@ -197,7 +197,7 @@ export default function ProjectCard() {
         {
           tecnologies?.robotTecnologies?.work.map(technology => 
             <span>
-              <Image src={technology.img} alt={technology.name} />
+              <Image loading='lazy' src={technology.img} alt={technology.name} />
               <span>{technology.name}</span>
             </span>
           )
@@ -208,7 +208,7 @@ export default function ProjectCard() {
         {
           tecnologies?.complementary?.work.map(technology => 
             <span>
-              <Image src={technology.img} alt={technology.name} />
+              <Image loading='lazy' src={technology.img} alt={technology.name} />
               <span>{technology.name}</span>
             </span>
           )
@@ -227,7 +227,7 @@ export default function ProjectCard() {
           {
             tecnologies?.webTecnologies?.lern.map(technology => 
               <span>
-                <Image src={technology.img} alt={technology.name} />
+                <Image loading='lazy' src={technology.img} alt={technology.name} />
                 <span>{technology.name}</span>
               </span>
             )
@@ -241,7 +241,7 @@ export default function ProjectCard() {
           {
             tecnologies?.robotTecnologies?.lern.map(technology => 
               <span>
-                <Image src={technology.img} alt={technology.name} />
+                <Image loading='lazy' src={technology.img} alt={technology.name} />
                 <span>{technology.name}</span>
               </span>
             )
@@ -255,7 +255,7 @@ export default function ProjectCard() {
           {
             tecnologies?.complementary?.lern.map(technology => 
               <span>
-                <Image src={technology.img} alt={technology.name} />
+                <Image loading='lazy' src={technology.img} alt={technology.name} />
                 <span>{technology.name}</span>
               </span>
             )

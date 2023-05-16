@@ -16,7 +16,7 @@ export default function ProjectCard({title, logo, description, linkProject, link
         <h3>{logo}</h3>
 
         <div className={Style.links}>
-          <Link href={linkProject}  target='_blank'><FaExternalLinkAlt className={Style.icon}/></Link>
+          <Link href={linkProject}  target='_blank'>Page<FaExternalLinkAlt className={Style.icon}/></Link>
           {
             linkCode &&
             <Link
@@ -24,7 +24,7 @@ export default function ProjectCard({title, logo, description, linkProject, link
               onClick={(e) => isPrivate && e.preventDefault()} href={linkCode}
               target='_blank'
             >
-                {isPrivate ? <FaLock className={Style.icon}/> : <FaGithub className={Style.icon}/>} {isPrivate && 'Priv'}
+              Code {isPrivate ? <FaLock className={Style.icon}/> : <FaGithub className={Style.icon}/>} {isPrivate && 'Priv'}
             </Link>
           }
         </div>

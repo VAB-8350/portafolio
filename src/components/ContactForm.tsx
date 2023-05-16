@@ -78,6 +78,7 @@ export default function ContactForm() {
   return (
     <div className={Style.contentForm}>
       <Image
+        loading='lazy'
         src={fromimage}
         alt='Imagen de formulario'
       />

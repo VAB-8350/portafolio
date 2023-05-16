@@ -99,13 +99,13 @@ export default function Home() {
 
   return (
     <div className={Style.container}>
-      <Image className={Style.background} id='background' src={background} alt='background' />
+      <Image loading='lazy' className={Style.background} id='background' src={background} alt='background' />
       <span className={Style['background-filter']} />
 
       <div className={Style['content-stars']}>
-        <Image className={Style.star} src={star} alt='star' />
-        <Image className={Style.star2} src={star} alt='star' />
-        <Image className={Style.star3} src={star} alt='star' />
+        <Image loading='lazy' className={Style.star} src={star} alt='star' />
+        <Image loading='lazy' className={Style.star2} src={star} alt='star' />
+        <Image loading='lazy' className={Style.star3} src={star} alt='star' />
       </div>
       
       <header className={Style.head}>
@@ -116,7 +116,7 @@ export default function Home() {
             <span onClick={nextContact}><FaInbox /> Contact</span>
           </div>
 
-          <h2><Image src={vicode} alt="logo personal" />My portfolio</h2>
+          <h2><Image loading='lazy' src={vicode} alt="logo personal" />My portfolio</h2>
         </nav>
         
         <div className={Style.body}>
@@ -126,7 +126,7 @@ export default function Home() {
 
           <section className={Style.right}>
             <picture>
-              <Image src={profilePic} alt="me" />
+              <Image loading='lazy' src={profilePic} alt="me" />
               <span className={`${Style['rotate-icon']} ${Style.icon1}`} />
               <span className={`${Style['rotate-icon']} ${Style.icon2}`} />
               <span className={`${Style['rotate-icon']} ${Style.icon3}`} />
@@ -180,12 +180,15 @@ export default function Home() {
       <footer className={Style.footer}>
         <Link target='_blank' href="https://github.com/VAB-8350">
           <FaGithub className={Style.icons} />
+          GitHub
         </Link>
         <Link target='_blank' href="https://www.linkedin.com/in/andres-barilin-1b8a0a1b4/">
           <FaLinkedin className={Style.icons} />
+          LinkedIn
         </Link>
         <Link target='_blank' href="mailto:victor.barilin2014@gmail.com">
           <FaEnvelope className={Style.icons} />
+          Email
         </Link>
 
         <span><a href="https://github.com/VAB-8350/portafolio">Developed by Victor Andres Barilin <FaGithub/></a></span>

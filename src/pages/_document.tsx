@@ -2,7 +2,7 @@ import { Html, Head, Main, NextScript } from 'next/document'
 
 export default function Document() {
   return (
-    <Html>
+    <Html lang='en'>
       <Head>
         <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
@@ -17,7 +17,7 @@ export default function Document() {
         <meta name="author" content="Victor Andres Barilin" />
 
         <meta property="og:title" content="Mi portfolio - Mi sitio web - victorbarilin" />
-        <meta property="og:description" content="Portafolio web personal, desarrollador en reactjs junior" />
+        <meta name="description" content="Portafolio web personal, desarrollador en reactjs junior" />
         <meta name="keywords" content="Desarrollador web, React, Front-end, Portafolio, victorbarilin, Programador, Developer" />
       </Head>
       <body>
