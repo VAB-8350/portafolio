@@ -11,7 +11,8 @@ import { FaUser,
   FaBriefcase,
   FaGamepad,
   FaGoogle,
-  FaFigma
+  FaFigma,
+  FaPlaneArrival
 } from "react-icons/fa"
 import axios from 'axios'
 
@@ -63,13 +64,13 @@ export default function Home() {
       linkProject: 'https://task.victorbarilin.com',
       logo: <FaTasks />
     },
-    // Movies
+    // eco landind
     {
-      title: 'Movies App',
-      description: 'Course of platzi api rest consumption (done only with HTML CSS and vanilla JavaScript)',
-      linkCode: 'https://github.com/VAB-8350/curso-practico-api-rest---Platzi',
-      linkProject: 'https://vab-8350.github.io/curso-practico-api-rest---Platzi/',
-      logo: <FaCameraRetro />
+      title: 'Landing page',
+      description: 'In this project I had the opportunity to do the design in figma and the code with the new Next.js (13.4)',
+      linkCode: 'private',
+      linkProject: 'https://eco-landing.vercel.app',
+      logo: <FaPlaneArrival />
     },
     // Grid
     {
