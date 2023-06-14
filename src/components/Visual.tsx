@@ -108,7 +108,7 @@ export default function Visual() {
             <Link href="/pdf/CV-Andres_Barilin.pdf" target='_blank' download='CV-Andres_Barilin.pdf'>Download CV</Link>
 
             <Link
-              href='https://www.canva.com/design/DAFhTqDATvY/JQDoIdbUWj1qJc0N_e8GzA/view?utm_content=DAFhTqDATvY&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink'
+              href='https://www.canva.com/design/DAFlvrITxu4/t6VpzTYhomtP0s4f8IWotA/view?utm_content=DAFlvrITxu4&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink'
               target='_blanck'
             >
               View CV
