@@ -19,6 +19,21 @@ export default function Document() {
         <meta property="og:title" content="Mi portfolio - Mi sitio web - victorbarilin" />
         <meta name="description" content="Portafolio web personal, desarrollador en reactjs junior" />
         <meta name="keywords" content="Desarrollador web, React, Front-end, Portafolio, victorbarilin, Programador, Developer" />
+
+        {/* Google tag (gtag.js) */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-LZHTSH610W"></script>
+
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-LZHTSH610W');
+            `
+          }}
+        />
       </Head>
       <body>
         <Main />
