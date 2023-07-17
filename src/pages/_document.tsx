@@ -20,6 +20,7 @@ export default function Document() {
         <meta name="description" content="Portafolio web personal, desarrollador en reactjs junior" />
         <meta name="keywords" content="Desarrollador web, React, Front-end, Portafolio, victorbarilin, Programador, Developer" />
 
+        {/* clarity config */}
         <script type="text/javascript" 
           dangerouslySetInnerHTML={{
             __html: `
@@ -31,20 +32,7 @@ export default function Document() {
           }}
         />
 
-        {/* Google tag (gtag.js) */}
-        {/* <script async src="https://www.googletagmanager.com/gtag/js?id=G-LZHTSH610W"></script>
-
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-
-              gtag('config', 'G-LZHTSH610W');
-            `
-          }}
-        /> */}
+        <meta name="msvalidate.01" content="9F865620FF2EB48160FC645CC3BC3859" />
       </Head>
       <body>
         <Main />
