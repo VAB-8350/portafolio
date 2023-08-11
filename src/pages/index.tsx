@@ -6,7 +6,6 @@ import { FaUser,
   FaLinkedin,
   FaGithub,
   FaEnvelope,
-  FaCameraRetro,
   FaTasks,
   FaBriefcase,
   FaGamepad,
@@ -14,7 +13,6 @@ import { FaUser,
   FaFigma,
   FaPlaneArrival
 } from "react-icons/fa"
-import axios from 'axios'
 
 // Internal module
 import Style from '@styles/styles.module.scss'
@@ -34,7 +32,7 @@ import AboutMe from '@components/AboutMe'
 import Experience from '@components/Experience'
 
 export default function Home() {
-  
+
   // Ref
   const about = useRef(null)
   const contact = useRef(null)
@@ -108,7 +106,7 @@ export default function Home() {
         <Image loading='lazy' className={Style.star2} src={star} alt='star' />
         <Image loading='lazy' className={Style.star3} src={star} alt='star' />
       </div>
-      
+
       <header className={Style.head}>
 
         <nav>
@@ -119,7 +117,7 @@ export default function Home() {
 
           <h2><Image loading='lazy' src={vicode} alt="logo personal" />My portfolio</h2>
         </nav>
-        
+
         <div className={Style.body}>
           <section className={Style.left}>
             <Visual />
@@ -142,7 +140,7 @@ export default function Home() {
 
           <AboutMe />
           <Tecnologies />
-          
+
         </section>
 
         <section className={Style.experience}>
@@ -196,27 +194,4 @@ export default function Home() {
       </footer>
     </div>
   )
-}
-
-export const getServerSideProps = async (context) => {
-
-  const userAgent = context.req.headers['user-agent']
-
-  const ip = context.req.headers['x-real-ip'] || context.req.socket.remoteAddress
-  
-  // Aquí envías la petición a la API de Telegram
-  try {
-    const message = `Nuevo usuario en la página! IP: ${ip}, Navegador: ${userAgent}`
-
-    const telegramApiUrl = `https://api.telegram.org/bot${process.env.TELEGRAM_API_KEY}/sendMessage`
-
-    await axios.post(telegramApiUrl, {
-      chat_id: process.env.TELEGRAM_CHAT_ID,
-      text: message,
-    })
-
-  } catch (error) {
-  }
-
-  return { props: {} }
 }
