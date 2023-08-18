@@ -103,14 +103,14 @@ export default function ProjectCard() {
           img: arduino,
           name: 'Arduino'
         },
-        {
-          img: micropython,
-          name: 'MicroPython'
-        },
-        {
-          img: solidworks,
-          name: 'SolidWorks'
-        },
+        // {
+        //   img: micropython,
+        //   name: 'MicroPython'
+        // },
+        // {
+        //   img: solidworks,
+        //   name: 'SolidWorks'
+        // },
         {
           img: fusion,
           name: 'Fusion 360'
@@ -119,10 +119,10 @@ export default function ProjectCard() {
           img: blender,
           name: 'Blender'
         },
-        {
-          img: eagle,
-          name: 'Eagle'
-        },
+        // {
+        //   img: eagle,
+        //   name: 'Eagle'
+        // },
       ],
       lern: []
     }
