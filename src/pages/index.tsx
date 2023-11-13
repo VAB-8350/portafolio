@@ -54,6 +54,15 @@ export default function Home() {
       linkProject: 'https://www.buckedup.com',
       logo: <FaBriefcase />
     },
+    // b-large
+    {
+      title: 'Affiliate page',
+      description: `This is a project I did with some friends, in which I was the only programmer, so the entire site is built completely by me in next.js.
+      Here I was able to develop the front, back and non-relational database with mongodb.`,
+      linkCode: 'private',
+      linkProject: 'https://www.b-large.com',
+      logo: <FaPlaneArrival />
+    },
     // To do
     {
       title: 'Task list',
@@ -61,14 +70,6 @@ export default function Home() {
       linkCode: 'https://github.com/VAB-8350/task-list',
       linkProject: 'https://task.victorbarilin.com',
       logo: <FaTasks />
-    },
-    // eco landind
-    {
-      title: 'Landing page',
-      description: 'In this project I had the opportunity to do the design in figma and the code with the new Next.js (13.4)',
-      linkCode: 'private',
-      linkProject: 'https://eco-landing.vercel.app',
-      logo: <FaPlaneArrival />
     },
     // Grid
     {

@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react'
 import VanillaTilt from 'vanilla-tilt'
 // Internal module
 import Style from '@styles/Experience.module.scss'
-import Visual from './Visual'
 
 export default function Experience() {
 
