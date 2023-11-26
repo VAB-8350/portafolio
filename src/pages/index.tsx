@@ -11,7 +11,7 @@ import { FaUser,
   FaGamepad,
   FaGoogle,
   FaFigma,
-  FaPlaneArrival
+  FaTshirt
 } from "react-icons/fa"
 
 // Internal module
@@ -61,7 +61,7 @@ export default function Home() {
       Here I was able to develop the front, back and non-relational database with mongodb.`,
       linkCode: 'private',
       linkProject: 'https://www.b-large.com',
-      logo: <FaPlaneArrival />
+      logo: <FaTshirt />
     },
     // To do
     {
